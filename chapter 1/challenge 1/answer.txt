@@ -1,0 +1,9 @@
+The DSLs used to create the book are (in the order shown in github):
+- Markdown
+- HTML
+- XML
+- Makefile
+- Dart
+- SCSS
+- CSS
+
