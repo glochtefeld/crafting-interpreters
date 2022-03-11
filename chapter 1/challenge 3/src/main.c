@@ -37,7 +37,7 @@ void print(struct DLinkedList* l) {
 
     struct Node* target = l->head;
     printf("[");
-    for (int i=0; i<list.length; i++) {
+    for (int i=0; i<l->length; i++) {
         printf("%s",target->val);
         if (i != l->length - 1)
             printf(", ");
