@@ -63,6 +63,8 @@ class Scanner {
                 if (match('/')) // Comment
                     while (peek() != '\n' && !isAtEnd())
                         advance();
+                else if (match('*')) // Multi-line comment
+                    multiLineComment();
                 else
                     addToken(TokenType.SLASH);
                 break;
@@ -136,6 +138,31 @@ class Scanner {
 
         addToken(type);
     }
+    private void multiLineComment() { // Re: prompt, nested comments don't really seem worth it.
+        int openCount = 1;
+        int closeCount = 0;
+
+        while (openCount != closeCount) {
+            while( !isAtEnd() && peek() != '*' && peek() != '/' ) {
+                if (peek() == '\n')
+                    line++;
+                advance();
+            }
+            if (match('/') && peek() == '*') { // nested comment
+                openCount++;
+                advance();
+            }
+            else if (match('*') && peek() == '/') { // closing comment
+                closeCount++;
+                advance();
+            }
+            else if (isAtEnd()) {
+                Lox.error(line, "Comment was not closed.");
+                return;
+            }
+        }
+    }
+
 
     private char advance() { return source.charAt(current++); }
     private void addToken(TokenType type) { addToken(type, null); }
