@@ -1,17 +1,37 @@
 package com.gavinlochtefeld.lox;
 
-class Interpreter implements Expr.Visitor<Object> {
-    void interpret(Expr expression) {
+import java.util.*; // List
+
+class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {
+    void interpret(List<Stmt> statements) {
         try {
-            Object value = evaluate(expression);
-            System.out.println(stringify(value));
+            for (Stmt statement : statements) {
+                execute(statement);
+            }
         } catch (RuntimeError error) {
             Lox.runtimeError(error);
         }
     }
 
+    private void execute(Stmt stmt) {
+        stmt.accept(this);
+    }
+
     private Object evaluate(Expr expr) {
         return expr.accept(this);
+    }
+
+    @Override
+    public Void visitExpressionStmt(Stmt.Expression stmt) {
+        evaluate(stmt.expression);
+        return null;
+    }
+
+    @Override
+    public Void visitPrintStmt(Stmt.Print stmt) {
+        Object value = evaluate(stmt.expression);
+        System.out.println(stringify(value));
+        return null;
     }
 
     private String stringify(Object object) {
@@ -95,8 +115,6 @@ class Interpreter implements Expr.Visitor<Object> {
                 return (double)left - (double)right;
             case SLASH:
                 checkNumberOperands(expr.operator, left, right);
-                if ((double)right == 0)
-                    throw new RuntimeError(expr.operator, "Divisor must be a non-zero value.");
                 return (double)left / (double)right;
             case STAR:
                 checkNumberOperands(expr.operator, left, right);
@@ -105,10 +123,10 @@ class Interpreter implements Expr.Visitor<Object> {
                 if (left instanceof Double && right instanceof Double) {
                     return (double)left + (double)right;
                 }
-                if (left instanceof String || right instanceof String) {
-                    return stringify(left) + stringify(right);
+                if (left instanceof String && right instanceof String) {
+                    return (String)left + (String)right;
                 }
-                throw new RuntimeError(expr.operator, "Operands must be two numbers or one string and another value.");
+                throw new RuntimeError(expr.operator, "Operands must be two numbers or two strings.");
             case BANG_EQUAL: return !isEqual(left, right);
             case EQUAL_EQUAL: return isEqual(left, right);
         }
