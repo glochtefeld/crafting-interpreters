@@ -4,6 +4,8 @@ declaration ::= varDecl
 varDecl     ::= "var" IDENTIFIER ( "=" expression )? ";"
 statement   ::= exprStatement
             |   printStmnt
+            |   block
+block       ::= "{" declaration* "}"
 exprStmnt   ::= expression ";"
 printStmnt  ::= "print" expression ";"
 expression  ::= assignment
