@@ -48,13 +48,6 @@ public class Lox {
     
         if (hadError) return;
         interpreter.interpret(statements);
-
-        if (statements.get(statements.size() - 1) instanceof Stmt.Expression) {
-            System.out.println(
-                interpreter.interpret(
-                    ((Stmt.Expression)(statements.get(statements.size() - 1))).expression
-                ));
-        }
     }
 
     static void error(int line, String message) { report(line, "", message); }
