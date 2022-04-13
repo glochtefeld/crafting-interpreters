@@ -20,7 +20,6 @@ public class GenerateAst {
             "Literal    : Object value",
             "Logical    : Expr left, Token operator, Expr right",
             "Unary      : Token operator, Expr right",
-            "Function   : List<Token> params, List<Stmt> body",
             "Variable   : Token name"
         ));
         defineAst(outputDir, "Stmt", Arrays.asList(
@@ -28,7 +27,7 @@ public class GenerateAst {
             "If         : Expr condition, Stmt thenBranch, Stmt elseBranch",
             "While      : Expr condition, Stmt body",
             "Expression : Expr expression",
-            "Function   : Token name, Expr.Function",
+            "Function   : Token name, List<Token> params, List<Stmt> body",
             "Print      : Expr expression",
             "Var        : Token name, Expr initializer",
             "Return     : Token keyword, Expr value" // Token retained for line errors
