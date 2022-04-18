@@ -1,0 +1,10 @@
+var a = 0;
+var temp;
+
+for (var i = 1; i < 10000; i = temp + i) {
+    print a;
+    temp = a;
+    a = i;
+}
+
+print "Hello world! " + "I think I'm in the computer!";

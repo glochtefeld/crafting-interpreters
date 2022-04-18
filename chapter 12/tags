@@ -1,0 +1,404 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AND	lox/TokenType.java	/^    AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,$/;"	e	enum:TokenType	file:
+Assign	lox/Expr.java	/^        Assign(Token name, Expr value) {$/;"	m	class:Expr.Assign
+Assign	lox/Expr.java	/^    static class Assign extends Expr {$/;"	c	class:Expr
+AstPrinter	AstPrinter.java	/^class AstPrinter implements Expr.Visitor<String> {$/;"	c
+BANG	lox/TokenType.java	/^    BANG, BANG_EQUAL,$/;"	e	enum:TokenType	file:
+BANG_EQUAL	lox/TokenType.java	/^    BANG, BANG_EQUAL,$/;"	e	enum:TokenType	file:
+Binary	lox/Expr.java	/^        Binary(Expr left, Token operator, Expr right) {$/;"	m	class:Expr.Binary
+Binary	lox/Expr.java	/^    static class Binary extends Expr {$/;"	c	class:Expr
+Block	lox/Stmt.java	/^        Block(List<Stmt> statements) {$/;"	m	class:Stmt.Block
+Block	lox/Stmt.java	/^    static class Block extends Stmt {$/;"	c	class:Stmt
+CLASS	lox/Resolver.java	/^        CLASS$/;"	e	enum:Resolver.ClassType	file:
+CLASS	lox/TokenType.java	/^    AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,$/;"	e	enum:TokenType	file:
+COMMA	lox/TokenType.java	/^    COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,$/;"	e	enum:TokenType	file:
+Call	lox/Expr.java	/^        Call(Expr callee, Token paren, List<Expr> arguments) {$/;"	m	class:Expr.Call
+Call	lox/Expr.java	/^    static class Call extends Expr {$/;"	c	class:Expr
+Class	lox/Stmt.java	/^        Class(Token name, List<Stmt.Function> methods) {$/;"	m	class:Stmt.Class
+Class	lox/Stmt.java	/^    static class Class extends Stmt {$/;"	c	class:Stmt
+ClassType	lox/Resolver.java	/^    private enum ClassType {$/;"	g	class:Resolver
+DOT	lox/TokenType.java	/^    COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,$/;"	e	enum:TokenType	file:
+ELSE	lox/TokenType.java	/^    AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,$/;"	e	enum:TokenType	file:
+EOF	lox/TokenType.java	/^    EOF$/;"	e	enum:TokenType	file:
+EQUAL	lox/TokenType.java	/^    EQUAL, EQUAL_EQUAL,$/;"	e	enum:TokenType	file:
+EQUAL_EQUAL	lox/TokenType.java	/^    EQUAL, EQUAL_EQUAL,$/;"	e	enum:TokenType	file:
+Environment	lox/Environment.java	/^    Environment() {$/;"	m	class:Environment
+Environment	lox/Environment.java	/^    Environment(Environment enclosing) {$/;"	m	class:Environment
+Environment	lox/Environment.java	/^class Environment {$/;"	c
+Expr	lox/Expr.java	/^abstract class Expr {$/;"	c
+Expression	lox/Stmt.java	/^        Expression(Expr expression) {$/;"	m	class:Stmt.Expression
+Expression	lox/Stmt.java	/^    static class Expression extends Stmt {$/;"	c	class:Stmt
+FALSE	lox/TokenType.java	/^    AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,$/;"	e	enum:TokenType	file:
+FOR	lox/TokenType.java	/^    AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,$/;"	e	enum:TokenType	file:
+FUN	lox/TokenType.java	/^    AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,$/;"	e	enum:TokenType	file:
+FUNCTION	lox/Resolver.java	/^        FUNCTION,$/;"	e	enum:Resolver.FunctionType	file:
+Function	lox/Stmt.java	/^        Function(Token name, List<Token> params, List<Stmt> body) {$/;"	m	class:Stmt.Function
+Function	lox/Stmt.java	/^    static class Function extends Stmt {$/;"	c	class:Stmt
+FunctionType	lox/Resolver.java	/^    private enum FunctionType {$/;"	g	class:Resolver
+GREATER	lox/TokenType.java	/^    GREATER, GREATER_EQUAL,$/;"	e	enum:TokenType	file:
+GREATER_EQUAL	lox/TokenType.java	/^    GREATER, GREATER_EQUAL,$/;"	e	enum:TokenType	file:
+GenerateAst	tool/GenerateAst.java	/^public class GenerateAst {$/;"	c
+Get	lox/Expr.java	/^        Get(Expr object, Token name) {$/;"	m	class:Expr.Get
+Get	lox/Expr.java	/^    static class Get extends Expr {$/;"	c	class:Expr
+Grouping	lox/Expr.java	/^        Grouping(Expr expression) {$/;"	m	class:Expr.Grouping
+Grouping	lox/Expr.java	/^    static class Grouping extends Expr {$/;"	c	class:Expr
+IDENTIFIER	lox/TokenType.java	/^    IDENTIFIER, STRING, NUMBER,$/;"	e	enum:TokenType	file:
+IF	lox/TokenType.java	/^    AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,$/;"	e	enum:TokenType	file:
+If	lox/Stmt.java	/^        If(Expr condition, Stmt thenBranch, Stmt elseBranch) {$/;"	m	class:Stmt.If
+If	lox/Stmt.java	/^    static class If extends Stmt {$/;"	c	class:Stmt
+Interpreter	lox/Interpreter.java	/^    Interpreter() {$/;"	m	class:Interpreter
+Interpreter	lox/Interpreter.java	/^class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {$/;"	c
+LEFT_BRACE	lox/TokenType.java	/^    LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,$/;"	e	enum:TokenType	file:
+LEFT_PAREN	lox/TokenType.java	/^    LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,$/;"	e	enum:TokenType	file:
+LESS	lox/TokenType.java	/^    LESS, LESS_EQUAL,$/;"	e	enum:TokenType	file:
+LESS_EQUAL	lox/TokenType.java	/^    LESS, LESS_EQUAL,$/;"	e	enum:TokenType	file:
+Literal	lox/Expr.java	/^        Literal(Object value) {$/;"	m	class:Expr.Literal
+Literal	lox/Expr.java	/^    static class Literal extends Expr {$/;"	c	class:Expr
+Logical	lox/Expr.java	/^        Logical(Expr left, Token operator, Expr right) {$/;"	m	class:Expr.Logical
+Logical	lox/Expr.java	/^    static class Logical extends Expr {$/;"	c	class:Expr
+Lox	lox/Lox.java	/^public class Lox {$/;"	c
+LoxCallable	lox/LoxCallable.java	/^interface LoxCallable {$/;"	i
+LoxClass	lox/LoxClass.java	/^    LoxClass(String name, Map<String, LoxFunction> methods) {$/;"	m	class:LoxClass
+LoxClass	lox/LoxClass.java	/^class LoxClass implements LoxCallable {$/;"	c
+LoxFunction	lox/LoxFunction.java	/^    LoxFunction(Stmt.Function declaration, Environment closure) {$/;"	m	class:LoxFunction
+LoxFunction	lox/LoxFunction.java	/^class LoxFunction implements LoxCallable {$/;"	c
+LoxInstance	lox/LoxInstance.java	/^    LoxInstance(LoxClass klass) {$/;"	m	class:LoxInstance
+LoxInstance	lox/LoxInstance.java	/^class LoxInstance {$/;"	c
+METHOD	lox/Resolver.java	/^        METHOD$/;"	e	enum:Resolver.FunctionType	file:
+MINUS	lox/TokenType.java	/^    COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,$/;"	e	enum:TokenType	file:
+NIL	lox/TokenType.java	/^    AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,$/;"	e	enum:TokenType	file:
+NONE	lox/Resolver.java	/^        NONE,$/;"	e	enum:Resolver.ClassType	file:
+NONE	lox/Resolver.java	/^        NONE,$/;"	e	enum:Resolver.FunctionType	file:
+NUMBER	lox/TokenType.java	/^    IDENTIFIER, STRING, NUMBER,$/;"	e	enum:TokenType	file:
+OR	lox/TokenType.java	/^    AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,$/;"	e	enum:TokenType	file:
+PLUS	lox/TokenType.java	/^    COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,$/;"	e	enum:TokenType	file:
+PRINT	lox/TokenType.java	/^    PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,$/;"	e	enum:TokenType	file:
+ParseError	lox/Parser.java	/^    private static class ParseError extends RuntimeException {}$/;"	c	class:Parser
+Parser	lox/Parser.java	/^    Parser(List<Token> tokens) {$/;"	m	class:Parser
+Parser	lox/Parser.java	/^class Parser {$/;"	c
+Print	lox/Stmt.java	/^        Print(Expr expression) {$/;"	m	class:Stmt.Print
+Print	lox/Stmt.java	/^    static class Print extends Stmt {$/;"	c	class:Stmt
+RETURN	lox/TokenType.java	/^    PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,$/;"	e	enum:TokenType	file:
+RIGHT_BRACE	lox/TokenType.java	/^    LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,$/;"	e	enum:TokenType	file:
+RIGHT_PAREN	lox/TokenType.java	/^    LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,$/;"	e	enum:TokenType	file:
+Resolver	lox/Resolver.java	/^    Resolver(Interpreter interpreter) {$/;"	m	class:Resolver
+Resolver	lox/Resolver.java	/^class Resolver implements Expr.Visitor<Void>, Stmt.Visitor<Void> {$/;"	c
+Return	lox/Return.java	/^    Return(Object value) {$/;"	m	class:Return
+Return	lox/Return.java	/^class Return extends RuntimeException {$/;"	c
+Return	lox/Stmt.java	/^        Return(Token keyword, Expr value) {$/;"	m	class:Stmt.Return
+Return	lox/Stmt.java	/^    static class Return extends Stmt {$/;"	c	class:Stmt
+RuntimeError	lox/RuntimeError.java	/^    RuntimeError(Token token, String message) {$/;"	m	class:RuntimeError
+RuntimeError	lox/RuntimeError.java	/^class RuntimeError extends RuntimeException {$/;"	c
+SEMICOLON	lox/TokenType.java	/^    COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,$/;"	e	enum:TokenType	file:
+SLASH	lox/TokenType.java	/^    COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,$/;"	e	enum:TokenType	file:
+STAR	lox/TokenType.java	/^    COMMA, DOT, MINUS, PLUS, SEMICOLON, SLASH, STAR,$/;"	e	enum:TokenType	file:
+STRING	lox/TokenType.java	/^    IDENTIFIER, STRING, NUMBER,$/;"	e	enum:TokenType	file:
+SUPER	lox/TokenType.java	/^    PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,$/;"	e	enum:TokenType	file:
+Scanner	lox/Scanner.java	/^    Scanner (String source) {$/;"	m	class:Scanner
+Scanner	lox/Scanner.java	/^class Scanner {$/;"	c
+Set	lox/Expr.java	/^        Set(Expr object, Token name, Expr value) {$/;"	m	class:Expr.Set
+Set	lox/Expr.java	/^    static class Set extends Expr {$/;"	c	class:Expr
+Stmt	lox/Stmt.java	/^abstract class Stmt {$/;"	c
+THIS	lox/TokenType.java	/^    PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,$/;"	e	enum:TokenType	file:
+TRUE	lox/TokenType.java	/^    PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,$/;"	e	enum:TokenType	file:
+This	lox/Expr.java	/^        This(Token keyword) {$/;"	m	class:Expr.This
+This	lox/Expr.java	/^    static class This extends Expr {$/;"	c	class:Expr
+Token	lox/Token.java	/^    Token(TokenType type, String lexeme, Object literal, int line) {$/;"	m	class:Token
+Token	lox/Token.java	/^class Token {$/;"	c
+TokenType	lox/TokenType.java	/^enum TokenType {$/;"	g
+Unary	lox/Expr.java	/^        Unary(Token operator, Expr right) {$/;"	m	class:Expr.Unary
+Unary	lox/Expr.java	/^    static class Unary extends Expr {$/;"	c	class:Expr
+VAR	lox/TokenType.java	/^    PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,$/;"	e	enum:TokenType	file:
+Var	lox/Stmt.java	/^        Var(Token name, Expr initializer) {$/;"	m	class:Stmt.Var
+Var	lox/Stmt.java	/^    static class Var extends Stmt {$/;"	c	class:Stmt
+Variable	lox/Expr.java	/^        Variable(Token name) {$/;"	m	class:Expr.Variable
+Variable	lox/Expr.java	/^    static class Variable extends Expr {$/;"	c	class:Expr
+Visitor	lox/Expr.java	/^    interface Visitor<R> {$/;"	i	class:Expr
+Visitor	lox/Stmt.java	/^    interface Visitor<R> {$/;"	i	class:Stmt
+WHILE	lox/TokenType.java	/^    PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE,$/;"	e	enum:TokenType	file:
+While	lox/Stmt.java	/^        While(Expr condition, Stmt body) {$/;"	m	class:Stmt.While
+While	lox/Stmt.java	/^    static class While extends Stmt {$/;"	c	class:Stmt
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.Assign
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.Binary
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.Call
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.Get
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.Grouping
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.Literal
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.Logical
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.Set
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.This
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.Unary
+accept	lox/Expr.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Expr.Variable
+accept	lox/Expr.java	/^    abstract <R> R accept(Visitor<R> visitor);$/;"	m	class:Expr
+accept	lox/Stmt.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Stmt.Block
+accept	lox/Stmt.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Stmt.Class
+accept	lox/Stmt.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Stmt.Expression
+accept	lox/Stmt.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Stmt.Function
+accept	lox/Stmt.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Stmt.If
+accept	lox/Stmt.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Stmt.Print
+accept	lox/Stmt.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Stmt.Return
+accept	lox/Stmt.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Stmt.Var
+accept	lox/Stmt.java	/^        <R> R accept(Visitor<R> visitor) {$/;"	m	class:Stmt.While
+accept	lox/Stmt.java	/^    abstract <R> R accept(Visitor<R> visitor);$/;"	m	class:Stmt
+addToken	lox/Scanner.java	/^    private void addToken(TokenType type) { addToken(type, null); }$/;"	m	class:Scanner	file:
+addToken	lox/Scanner.java	/^    private void addToken(TokenType type, Object literal) {$/;"	m	class:Scanner	file:
+advance	lox/Parser.java	/^    private Token advance() {$/;"	m	class:Parser	file:
+advance	lox/Scanner.java	/^    private char advance() { return source.charAt(current++); }$/;"	m	class:Scanner	file:
+ancestor	lox/Environment.java	/^    Environment ancestor(int distance) {$/;"	m	class:Environment
+and	lox/Parser.java	/^    private Expr and() {$/;"	m	class:Parser	file:
+arguments	lox/Expr.java	/^        final List<Expr> arguments;$/;"	f	class:Expr.Call
+arity	lox/LoxCallable.java	/^    int arity();$/;"	m	interface:LoxCallable
+arity	lox/LoxClass.java	/^    public int arity() {$/;"	m	class:LoxClass
+arity	lox/LoxFunction.java	/^    public int arity() {$/;"	m	class:LoxFunction
+assign	lox/Environment.java	/^    void assign(Token name, Object value) {$/;"	m	class:Environment
+assignment	lox/Parser.java	/^    private Expr assignment() {$/;"	m	class:Parser	file:
+beginScope	lox/Resolver.java	/^    private void beginScope() {$/;"	m	class:Resolver	file:
+bind	lox/LoxFunction.java	/^    LoxFunction bind(LoxInstance instance) {$/;"	m	class:LoxFunction
+block	lox/Parser.java	/^    private List<Stmt> block() {$/;"	m	class:Parser	file:
+body	lox/Stmt.java	/^        final List<Stmt> body;$/;"	f	class:Stmt.Function
+body	lox/Stmt.java	/^        final Stmt body;$/;"	f	class:Stmt.While
+call	lox/LoxCallable.java	/^    Object call(Interpreter interpreter, List<Object> arguments);$/;"	m	interface:LoxCallable
+call	lox/LoxClass.java	/^    public Object call(Interpreter interpreter, List<Object> arguments) {$/;"	m	class:LoxClass
+call	lox/LoxFunction.java	/^    public Object call(Interpreter interpreter, List<Object> arguments) {$/;"	m	class:LoxFunction
+call	lox/Parser.java	/^    private Expr call() {$/;"	m	class:Parser	file:
+callee	lox/Expr.java	/^        final Expr callee;$/;"	f	class:Expr.Call
+check	lox/Parser.java	/^    private boolean check (TokenType type) {$/;"	m	class:Parser	file:
+checkNumberOperand	lox/Interpreter.java	/^    private void checkNumberOperand(Token operator, Object operand) {$/;"	m	class:Interpreter	file:
+checkNumberOperands	lox/Interpreter.java	/^    private void checkNumberOperands(Token operator, Object left, Object right) {$/;"	m	class:Interpreter	file:
+classDeclaration	lox/Parser.java	/^    private Stmt classDeclaration() {$/;"	m	class:Parser	file:
+closure	lox/LoxFunction.java	/^    private final Environment closure;$/;"	f	class:LoxFunction	file:
+com.gavinlochtefeld.lox	AstPrinter.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/Environment.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/Expr.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/Interpreter.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/Lox.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/LoxCallable.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/LoxClass.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/LoxFunction.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/LoxInstance.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/Parser.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/Resolver.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/Return.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/RuntimeError.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/Scanner.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/Stmt.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/Token.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.lox	lox/TokenType.java	/^package com.gavinlochtefeld.lox;$/;"	p
+com.gavinlochtefeld.tool	tool/GenerateAst.java	/^package com.gavinlochtefeld.tool;$/;"	p
+comparison	lox/Parser.java	/^    private Expr comparison() {$/;"	m	class:Parser	file:
+condition	lox/Stmt.java	/^        final Expr condition;$/;"	f	class:Stmt.If
+condition	lox/Stmt.java	/^        final Expr condition;$/;"	f	class:Stmt.While
+consume	lox/Parser.java	/^    private Token consume(TokenType type, String message) {$/;"	m	class:Parser	file:
+current	lox/Parser.java	/^    private int current = 0;$/;"	f	class:Parser	file:
+current	lox/Scanner.java	/^    private int current = 0;$/;"	f	class:Scanner	file:
+currentClass	lox/Resolver.java	/^    private ClassType currentClass = ClassType.NONE;$/;"	f	class:Resolver	file:
+currentFunction	lox/Resolver.java	/^    private FunctionType currentFunction = FunctionType.NONE;$/;"	f	class:Resolver	file:
+declaration	lox/LoxFunction.java	/^    private final Stmt.Function declaration;$/;"	f	class:LoxFunction	file:
+declaration	lox/Parser.java	/^    private Stmt declaration() {$/;"	m	class:Parser	file:
+declare	lox/Resolver.java	/^    private void declare(Token name) {$/;"	m	class:Resolver	file:
+define	lox/Environment.java	/^    void define(String name, Object value) {$/;"	m	class:Environment
+define	lox/Resolver.java	/^    private void define(Token name) {$/;"	m	class:Resolver	file:
+defineAst	tool/GenerateAst.java	/^    private static void defineAst(String outputDir, String baseName, $/;"	m	class:GenerateAst	file:
+defineAt	lox/Environment.java	/^    void defineAt(int distance, Token name, Object value) {$/;"	m	class:Environment
+defineType	tool/GenerateAst.java	/^    private static void defineType(PrintWriter writer, $/;"	m	class:GenerateAst	file:
+defineVisitor	tool/GenerateAst.java	/^    private static void defineVisitor(PrintWriter writer, String baseName, List<String> types) {$/;"	m	class:GenerateAst	file:
+elseBranch	lox/Stmt.java	/^        final Stmt elseBranch;$/;"	f	class:Stmt.If
+enclosing	lox/Environment.java	/^    final Environment enclosing;$/;"	f	class:Environment
+endScope	lox/Resolver.java	/^    private void endScope() {$/;"	m	class:Resolver	file:
+environment	lox/Interpreter.java	/^    private Environment environment = globals;$/;"	f	class:Interpreter	file:
+equality	lox/Parser.java	/^    private Expr equality() {$/;"	m	class:Parser	file:
+error	lox/Lox.java	/^    static void error(Token token, String message) {$/;"	m	class:Lox
+error	lox/Lox.java	/^    static void error(int line, String message) { report(line, "", message); }$/;"	m	class:Lox
+error	lox/Parser.java	/^    private ParseError error(Token token, String message) {$/;"	m	class:Parser	file:
+evaluate	lox/Interpreter.java	/^    private Object evaluate(Expr expr) {$/;"	m	class:Interpreter	file:
+execute	lox/Interpreter.java	/^    private void execute(Stmt stmt) {$/;"	m	class:Interpreter	file:
+executeBlock	lox/Interpreter.java	/^    void executeBlock(List<Stmt> statements, Environment environment) { \/\/ Protected$/;"	m	class:Interpreter
+expression	lox/Expr.java	/^        final Expr expression;$/;"	f	class:Expr.Grouping
+expression	lox/Parser.java	/^    private Expr expression() {$/;"	m	class:Parser	file:
+expression	lox/Stmt.java	/^        final Expr expression;$/;"	f	class:Stmt.Expression
+expression	lox/Stmt.java	/^        final Expr expression;$/;"	f	class:Stmt.Print
+expressionStatement	lox/Parser.java	/^    private Stmt expressionStatement() {$/;"	m	class:Parser	file:
+factor	lox/Parser.java	/^    private Expr factor() {$/;"	m	class:Parser	file:
+fields	lox/LoxInstance.java	/^    private final Map<String, Object> fields = new HashMap<>();$/;"	f	class:LoxInstance	file:
+findMethod	lox/LoxClass.java	/^    LoxFunction findMethod(String name) {$/;"	m	class:LoxClass
+finishCall	lox/Parser.java	/^    private Expr finishCall(Expr callee) {$/;"	m	class:Parser	file:
+forStatement	lox/Parser.java	/^    private Stmt forStatement() {$/;"	m	class:Parser	file:
+function	lox/Parser.java	/^    private Stmt.Function function(String kind) {$/;"	m	class:Parser	file:
+get	lox/Environment.java	/^    Object get(Token name) {$/;"	m	class:Environment
+get	lox/LoxInstance.java	/^    Object get(Token name) {$/;"	m	class:LoxInstance
+getAt	lox/Environment.java	/^    Object getAt(int distance, String name) {$/;"	m	class:Environment
+globals	lox/Interpreter.java	/^    final Environment globals = new Environment();$/;"	f	class:Interpreter
+hadError	lox/Lox.java	/^    static boolean hadError = false;$/;"	f	class:Lox
+hadRuntimeError	lox/Lox.java	/^    static boolean hadRuntimeError = false;$/;"	f	class:Lox
+identifier	lox/Scanner.java	/^    private void identifier() {$/;"	m	class:Scanner	file:
+ifStatement	lox/Parser.java	/^    private Stmt ifStatement() {$/;"	m	class:Parser	file:
+initializer	lox/Stmt.java	/^        final Expr initializer;$/;"	f	class:Stmt.Var
+interpret	lox/Interpreter.java	/^    void interpret(List<Stmt> statements) {$/;"	m	class:Interpreter
+interpreter	lox/Lox.java	/^    private static Interpreter interpreter = new Interpreter();$/;"	f	class:Lox	file:
+interpreter	lox/Resolver.java	/^    private final Interpreter interpreter;$/;"	f	class:Resolver	file:
+isAlpha	lox/Scanner.java	/^    private boolean isAlpha(char c) { return 'a' <= c && c <='z' || 'A' <= c && c <= 'Z' || c == '_'; }$/;"	m	class:Scanner	file:
+isAlphaNumeric	lox/Scanner.java	/^    private boolean isAlphaNumeric(char c) { return isAlpha(c) || isDigit(c); }$/;"	m	class:Scanner	file:
+isAtEnd	lox/Parser.java	/^    private boolean isAtEnd() {$/;"	m	class:Parser	file:
+isAtEnd	lox/Scanner.java	/^    private boolean isAtEnd() { return current >= source.length(); }$/;"	m	class:Scanner	file:
+isDigit	lox/Scanner.java	/^    private boolean isDigit(char c) { return '0' <= c && c <= '9'; }$/;"	m	class:Scanner	file:
+isEqual	lox/Interpreter.java	/^    private boolean isEqual(Object a, Object b) {$/;"	m	class:Interpreter	file:
+isTruthy	lox/Interpreter.java	/^    private boolean isTruthy (Object object) {$/;"	m	class:Interpreter	file:
+keyword	lox/Expr.java	/^        final Token keyword;$/;"	f	class:Expr.This
+keyword	lox/Stmt.java	/^        final Token keyword;$/;"	f	class:Stmt.Return
+keywords	lox/Scanner.java	/^    private static final Map<String, TokenType> keywords;$/;"	f	class:Scanner	file:
+klass	lox/LoxInstance.java	/^    private LoxClass klass;$/;"	f	class:LoxInstance	file:
+left	lox/Expr.java	/^        final Expr left;$/;"	f	class:Expr.Binary
+left	lox/Expr.java	/^        final Expr left;$/;"	f	class:Expr.Logical
+lexeme	lox/Token.java	/^    final String lexeme;$/;"	f	class:Token
+line	lox/Scanner.java	/^    private int line = 1;$/;"	f	class:Scanner	file:
+line	lox/Token.java	/^    final int line;$/;"	f	class:Token
+literal	lox/Token.java	/^    final Object literal;$/;"	f	class:Token
+locals	lox/Interpreter.java	/^    private final Map<Expr, Integer> locals = new HashMap<>();$/;"	f	class:Interpreter	file:
+lookUpVariable	lox/Interpreter.java	/^    private Object lookUpVariable(Token name, Expr expr) {$/;"	m	class:Interpreter	file:
+main	lox/Lox.java	/^    public static void main(String[] args) throws IOException {$/;"	m	class:Lox
+main	tool/GenerateAst.java	/^    public static void main(String[] args) throws IOException {$/;"	m	class:GenerateAst
+match	lox/Parser.java	/^    private boolean match(TokenType... types) {$/;"	m	class:Parser	file:
+match	lox/Scanner.java	/^    private boolean match(char expected) {$/;"	m	class:Scanner	file:
+methods	lox/LoxClass.java	/^    private final Map<String, LoxFunction> methods;$/;"	f	class:LoxClass	file:
+methods	lox/Stmt.java	/^        final List<Stmt.Function> methods;$/;"	f	class:Stmt.Class
+name	lox/Expr.java	/^        final Token name;$/;"	f	class:Expr.Assign
+name	lox/Expr.java	/^        final Token name;$/;"	f	class:Expr.Get
+name	lox/Expr.java	/^        final Token name;$/;"	f	class:Expr.Set
+name	lox/Expr.java	/^        final Token name;$/;"	f	class:Expr.Variable
+name	lox/LoxClass.java	/^    final String name;$/;"	f	class:LoxClass
+name	lox/Stmt.java	/^        final Token name;$/;"	f	class:Stmt.Class
+name	lox/Stmt.java	/^        final Token name;$/;"	f	class:Stmt.Function
+name	lox/Stmt.java	/^        final Token name;$/;"	f	class:Stmt.Var
+number	lox/Scanner.java	/^    private void number() {$/;"	m	class:Scanner	file:
+object	lox/Expr.java	/^        final Expr object;$/;"	f	class:Expr.Get
+object	lox/Expr.java	/^        final Expr object;$/;"	f	class:Expr.Set
+operator	lox/Expr.java	/^        final Token operator;$/;"	f	class:Expr.Binary
+operator	lox/Expr.java	/^        final Token operator;$/;"	f	class:Expr.Logical
+operator	lox/Expr.java	/^        final Token operator;$/;"	f	class:Expr.Unary
+or	lox/Parser.java	/^    private Expr or() {$/;"	m	class:Parser	file:
+params	lox/Stmt.java	/^        final List<Token> params;$/;"	f	class:Stmt.Function
+paren	lox/Expr.java	/^        final Token paren;$/;"	f	class:Expr.Call
+parenthesize	AstPrinter.java	/^    private String parenthesize(String name, Expr... exprs) {$/;"	m	class:AstPrinter	file:
+parse	lox/Parser.java	/^    List<Stmt> parse() {$/;"	m	class:Parser
+peek	lox/Parser.java	/^    private Token peek() {$/;"	m	class:Parser	file:
+peek	lox/Scanner.java	/^    private char peek() {$/;"	m	class:Scanner	file:
+peekNext	lox/Scanner.java	/^    private char peekNext() {$/;"	m	class:Scanner	file:
+previous	lox/Parser.java	/^    private Token previous() {$/;"	m	class:Parser	file:
+primary	lox/Parser.java	/^    private Expr primary() {$/;"	m	class:Parser	file:
+print	AstPrinter.java	/^    String print(Expr expr) {$/;"	m	class:AstPrinter
+printStatement	lox/Parser.java	/^    private Stmt printStatement() {$/;"	m	class:Parser	file:
+report	lox/Lox.java	/^    private static void report(int line, String where, String message) {$/;"	m	class:Lox	file:
+resolve	lox/Interpreter.java	/^    void resolve(Expr expr, int depth) {$/;"	m	class:Interpreter
+resolve	lox/Resolver.java	/^    private void resolve(Expr expr) {$/;"	m	class:Resolver	file:
+resolve	lox/Resolver.java	/^    private void resolve(Stmt stmt) {$/;"	m	class:Resolver	file:
+resolve	lox/Resolver.java	/^    void resolve(List<Stmt> statements) {$/;"	m	class:Resolver
+resolveFunction	lox/Resolver.java	/^    private void resolveFunction(Stmt.Function function, FunctionType type) {$/;"	m	class:Resolver	file:
+resolveLocal	lox/Resolver.java	/^    private void resolveLocal(Expr expr, Token name) {$/;"	m	class:Resolver	file:
+returnStatement	lox/Parser.java	/^    private Stmt returnStatement() {$/;"	m	class:Parser	file:
+right	lox/Expr.java	/^        final Expr right;$/;"	f	class:Expr.Binary
+right	lox/Expr.java	/^        final Expr right;$/;"	f	class:Expr.Logical
+right	lox/Expr.java	/^        final Expr right;$/;"	f	class:Expr.Unary
+run	lox/Lox.java	/^    private static void run(String source) {$/;"	m	class:Lox	file:
+runFile	lox/Lox.java	/^    private static void runFile(String path) throws IOException {$/;"	m	class:Lox	file:
+runPrompt	lox/Lox.java	/^    private static void runPrompt() throws IOException {$/;"	m	class:Lox	file:
+runtimeError	lox/Lox.java	/^    static void runtimeError(RuntimeError error) {$/;"	m	class:Lox
+scanToken	lox/Scanner.java	/^    private void scanToken() {$/;"	m	class:Scanner	file:
+scanTokens	lox/Scanner.java	/^    List<Token> scanTokens() {$/;"	m	class:Scanner
+scopes	lox/Resolver.java	/^    private final Stack<Map<String, Boolean>> scopes = new Stack<>();$/;"	f	class:Resolver	file:
+set	lox/LoxInstance.java	/^    void set(Token name, Object value) {$/;"	m	class:LoxInstance
+source	lox/Scanner.java	/^    private final String source;$/;"	f	class:Scanner	file:
+start	lox/Scanner.java	/^    private int start = 0;$/;"	f	class:Scanner	file:
+statement	lox/Parser.java	/^    private Stmt statement() {$/;"	m	class:Parser	file:
+statements	lox/Stmt.java	/^        final List<Stmt> statements;$/;"	f	class:Stmt.Block
+string	lox/Scanner.java	/^    private void string() {$/;"	m	class:Scanner	file:
+stringify	lox/Interpreter.java	/^    private String stringify(Object object) {$/;"	m	class:Interpreter	file:
+synchronize	lox/Parser.java	/^    private void synchronize() {$/;"	m	class:Parser	file:
+term	lox/Parser.java	/^    private Expr term() {$/;"	m	class:Parser	file:
+thenBranch	lox/Stmt.java	/^        final Stmt thenBranch;$/;"	f	class:Stmt.If
+toString	lox/LoxClass.java	/^    public String toString() {$/;"	m	class:LoxClass
+toString	lox/LoxFunction.java	/^    public String toString() {$/;"	m	class:LoxFunction
+toString	lox/LoxInstance.java	/^    public String toString() {$/;"	m	class:LoxInstance
+toString	lox/Token.java	/^    public String toString() {$/;"	m	class:Token
+token	lox/RuntimeError.java	/^    final Token token;$/;"	f	class:RuntimeError
+tokens	lox/Parser.java	/^    private final List<Token> tokens;$/;"	f	class:Parser	file:
+tokens	lox/Scanner.java	/^    private final List<Token> tokens = new ArrayList<>();$/;"	f	class:Scanner	file:
+type	lox/Token.java	/^    final TokenType type;$/;"	f	class:Token
+unary	lox/Parser.java	/^    private Expr unary() {$/;"	m	class:Parser	file:
+value	lox/Expr.java	/^        final Expr value;$/;"	f	class:Expr.Assign
+value	lox/Expr.java	/^        final Expr value;$/;"	f	class:Expr.Set
+value	lox/Expr.java	/^        final Object value;$/;"	f	class:Expr.Literal
+value	lox/Return.java	/^    final Object value;$/;"	f	class:Return
+value	lox/Stmt.java	/^        final Expr value;$/;"	f	class:Stmt.Return
+values	lox/Environment.java	/^    private final Map<String, Object> values = new HashMap<>();$/;"	f	class:Environment	file:
+varDeclaration	lox/Parser.java	/^    private Stmt varDeclaration() {$/;"	m	class:Parser	file:
+visitAssignExpr	lox/Expr.java	/^        R visitAssignExpr(Assign expr);$/;"	m	interface:Expr.Visitor
+visitAssignExpr	lox/Interpreter.java	/^    public Object visitAssignExpr(Expr.Assign expr) {$/;"	m	class:Interpreter
+visitAssignExpr	lox/Resolver.java	/^    public Void visitAssignExpr(Expr.Assign expr) {$/;"	m	class:Resolver
+visitBinaryExpr	AstPrinter.java	/^    public String visitBinaryExpr(Expr.Binary expr) {$/;"	m	class:AstPrinter
+visitBinaryExpr	lox/Expr.java	/^        R visitBinaryExpr(Binary expr);$/;"	m	interface:Expr.Visitor
+visitBinaryExpr	lox/Interpreter.java	/^    public Object visitBinaryExpr(Expr.Binary expr) {$/;"	m	class:Interpreter
+visitBinaryExpr	lox/Resolver.java	/^    public Void visitBinaryExpr(Expr.Binary expr) {$/;"	m	class:Resolver
+visitBlockStmt	lox/Interpreter.java	/^    public Void visitBlockStmt(Stmt.Block stmt) {$/;"	m	class:Interpreter
+visitBlockStmt	lox/Resolver.java	/^    public Void visitBlockStmt(Stmt.Block stmt) {$/;"	m	class:Resolver
+visitBlockStmt	lox/Stmt.java	/^        R visitBlockStmt(Block stmt);$/;"	m	interface:Stmt.Visitor
+visitCallExpr	lox/Expr.java	/^        R visitCallExpr(Call expr);$/;"	m	interface:Expr.Visitor
+visitCallExpr	lox/Interpreter.java	/^    public Object visitCallExpr(Expr.Call expr) {$/;"	m	class:Interpreter
+visitCallExpr	lox/Resolver.java	/^    public Void visitCallExpr(Expr.Call expr) {$/;"	m	class:Resolver
+visitClassStmt	lox/Interpreter.java	/^    public Void visitClassStmt(Stmt.Class stmt) {$/;"	m	class:Interpreter
+visitClassStmt	lox/Resolver.java	/^    public Void visitClassStmt(Stmt.Class stmt) {$/;"	m	class:Resolver
+visitClassStmt	lox/Stmt.java	/^        R visitClassStmt(Class stmt);$/;"	m	interface:Stmt.Visitor
+visitExpressionStmt	lox/Interpreter.java	/^    public Void visitExpressionStmt(Stmt.Expression stmt) {$/;"	m	class:Interpreter
+visitExpressionStmt	lox/Resolver.java	/^    public Void visitExpressionStmt(Stmt.Expression stmt) {$/;"	m	class:Resolver
+visitExpressionStmt	lox/Stmt.java	/^        R visitExpressionStmt(Expression stmt);$/;"	m	interface:Stmt.Visitor
+visitFunctionStmt	lox/Interpreter.java	/^    public Void visitFunctionStmt(Stmt.Function stmt) {$/;"	m	class:Interpreter
+visitFunctionStmt	lox/Resolver.java	/^    public Void visitFunctionStmt(Stmt.Function stmt) {$/;"	m	class:Resolver
+visitFunctionStmt	lox/Stmt.java	/^        R visitFunctionStmt(Function stmt);$/;"	m	interface:Stmt.Visitor
+visitGetExpr	lox/Expr.java	/^        R visitGetExpr(Get expr);$/;"	m	interface:Expr.Visitor
+visitGetExpr	lox/Interpreter.java	/^    public Object visitGetExpr(Expr.Get expr) {$/;"	m	class:Interpreter
+visitGetExpr	lox/Resolver.java	/^    public Void visitGetExpr(Expr.Get expr) {$/;"	m	class:Resolver
+visitGroupingExpr	AstPrinter.java	/^    public String visitGroupingExpr(Expr.Grouping expr) {$/;"	m	class:AstPrinter
+visitGroupingExpr	lox/Expr.java	/^        R visitGroupingExpr(Grouping expr);$/;"	m	interface:Expr.Visitor
+visitGroupingExpr	lox/Interpreter.java	/^    public Object visitGroupingExpr(Expr.Grouping expr) {$/;"	m	class:Interpreter
+visitGroupingExpr	lox/Resolver.java	/^    public Void visitGroupingExpr(Expr.Grouping expr) {$/;"	m	class:Resolver
+visitIfStmt	lox/Interpreter.java	/^    public Void visitIfStmt(Stmt.If stmt) {$/;"	m	class:Interpreter
+visitIfStmt	lox/Resolver.java	/^    public Void visitIfStmt(Stmt.If stmt) {$/;"	m	class:Resolver
+visitIfStmt	lox/Stmt.java	/^        R visitIfStmt(If stmt);$/;"	m	interface:Stmt.Visitor
+visitLiteralExpr	AstPrinter.java	/^    public String visitLiteralExpr(Expr.Literal expr) {$/;"	m	class:AstPrinter
+visitLiteralExpr	lox/Expr.java	/^        R visitLiteralExpr(Literal expr);$/;"	m	interface:Expr.Visitor
+visitLiteralExpr	lox/Interpreter.java	/^    public Object visitLiteralExpr(Expr.Literal expr) {$/;"	m	class:Interpreter
+visitLiteralExpr	lox/Resolver.java	/^    public Void visitLiteralExpr(Expr.Literal expr) {$/;"	m	class:Resolver
+visitLogicalExpr	lox/Expr.java	/^        R visitLogicalExpr(Logical expr);$/;"	m	interface:Expr.Visitor
+visitLogicalExpr	lox/Interpreter.java	/^    public Object visitLogicalExpr(Expr.Logical expr) {$/;"	m	class:Interpreter
+visitLogicalExpr	lox/Resolver.java	/^    public Void visitLogicalExpr(Expr.Logical expr) {$/;"	m	class:Resolver
+visitPrintStmt	lox/Interpreter.java	/^    public Void visitPrintStmt(Stmt.Print stmt) {$/;"	m	class:Interpreter
+visitPrintStmt	lox/Resolver.java	/^    public Void visitPrintStmt(Stmt.Print stmt) {$/;"	m	class:Resolver
+visitPrintStmt	lox/Stmt.java	/^        R visitPrintStmt(Print stmt);$/;"	m	interface:Stmt.Visitor
+visitReturnStmt	lox/Interpreter.java	/^    public Void visitReturnStmt(Stmt.Return stmt) {$/;"	m	class:Interpreter
+visitReturnStmt	lox/Resolver.java	/^    public Void visitReturnStmt(Stmt.Return stmt) {$/;"	m	class:Resolver
+visitReturnStmt	lox/Stmt.java	/^        R visitReturnStmt(Return stmt);$/;"	m	interface:Stmt.Visitor
+visitSetExpr	lox/Expr.java	/^        R visitSetExpr(Set expr);$/;"	m	interface:Expr.Visitor
+visitSetExpr	lox/Interpreter.java	/^    public Object visitSetExpr(Expr.Set expr) {$/;"	m	class:Interpreter
+visitSetExpr	lox/Resolver.java	/^    public Void visitSetExpr(Expr.Set expr) {$/;"	m	class:Resolver
+visitThisExpr	lox/Expr.java	/^        R visitThisExpr(This expr);$/;"	m	interface:Expr.Visitor
+visitThisExpr	lox/Interpreter.java	/^    public Object visitThisExpr(Expr.This expr) {$/;"	m	class:Interpreter
+visitThisExpr	lox/Resolver.java	/^    public Void visitThisExpr(Expr.This expr) {$/;"	m	class:Resolver
+visitUnaryExpr	AstPrinter.java	/^    public String visitUnaryExpr(Expr.Unary expr) {$/;"	m	class:AstPrinter
+visitUnaryExpr	lox/Expr.java	/^        R visitUnaryExpr(Unary expr);$/;"	m	interface:Expr.Visitor
+visitUnaryExpr	lox/Interpreter.java	/^    public Object visitUnaryExpr(Expr.Unary expr) {$/;"	m	class:Interpreter
+visitUnaryExpr	lox/Resolver.java	/^    public Void visitUnaryExpr(Expr.Unary expr) {$/;"	m	class:Resolver
+visitVarStmt	lox/Interpreter.java	/^    public Void visitVarStmt(Stmt.Var stmt) {$/;"	m	class:Interpreter
+visitVarStmt	lox/Resolver.java	/^    public Void visitVarStmt(Stmt.Var stmt) {$/;"	m	class:Resolver
+visitVarStmt	lox/Stmt.java	/^        R visitVarStmt(Var stmt);$/;"	m	interface:Stmt.Visitor
+visitVariableExpr	AstPrinter.java	/^    public String visitVariableExpr(Expr.Variable expr) {$/;"	m	class:AstPrinter
+visitVariableExpr	lox/Expr.java	/^        R visitVariableExpr(Variable expr);$/;"	m	interface:Expr.Visitor
+visitVariableExpr	lox/Interpreter.java	/^    public Object visitVariableExpr(Expr.Variable expr) {$/;"	m	class:Interpreter
+visitVariableExpr	lox/Resolver.java	/^    public Void visitVariableExpr(Expr.Variable expr) {$/;"	m	class:Resolver
+visitWhileStmt	lox/Interpreter.java	/^    public Void visitWhileStmt(Stmt.While stmt) {$/;"	m	class:Interpreter
+visitWhileStmt	lox/Resolver.java	/^    public Void visitWhileStmt(Stmt.While stmt) {$/;"	m	class:Resolver
+visitWhileStmt	lox/Stmt.java	/^        R visitWhileStmt(While stmt);$/;"	m	interface:Stmt.Visitor
+whileStatement	lox/Parser.java	/^    private Stmt whileStatement() {$/;"	m	class:Parser	file:

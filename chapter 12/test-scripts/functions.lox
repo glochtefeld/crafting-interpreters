@@ -1,0 +1,11 @@
+fun sayHello(name, excitement) {
+    var exclamation;
+    if (excitement)
+        exclamation = "!";
+    else
+        exclamation = ".";
+    print "Hello, " + name + exclamation;
+}
+
+sayHello("Gavin", false);
+sayHello("World", true);
