@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/double-link-list.h
+string.h
+-
+stdlib.h
+-
+stdbool.h
+-
+
+/home/lochga01/Projects/crafting-interpreters/chapter 1/challenge 3/src/main.c
+double-link-list.h
+/home/lochga01/Projects/crafting-interpreters/chapter 1/challenge 3/src/double-link-list.h
+string.h
+-
+stdlib.h
+-
+stdio.h
+-
+

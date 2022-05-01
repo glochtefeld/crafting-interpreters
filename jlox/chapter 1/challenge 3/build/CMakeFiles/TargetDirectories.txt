@@ -1,0 +1,4 @@
+/home/lochga01/Projects/crafting-interpreters/chapter 1/challenge 3/build/CMakeFiles/edit_cache.dir
+/home/lochga01/Projects/crafting-interpreters/chapter 1/challenge 3/build/CMakeFiles/dlinkedlist_test.dir
+/home/lochga01/Projects/crafting-interpreters/chapter 1/challenge 3/build/CMakeFiles/rebuild_cache.dir
+/home/lochga01/Projects/crafting-interpreters/chapter 1/challenge 3/build/CMakeFiles/d_linked_list.dir

@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/dlinkedlist_test.dir/src/main.c.o  -o dlinkedlist_test  libd_linked_list.a 
