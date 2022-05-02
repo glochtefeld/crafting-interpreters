@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "../../include/debug/debug.h"
-#include "../../include/value.h"
+#include "debug/debug.h"
+#include "value.h"
 
 static int simpleInstruction(const char* name, int offset) {
     printf("%s\n", name);

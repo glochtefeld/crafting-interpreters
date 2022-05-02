@@ -1,7 +1,7 @@
 #ifndef CLOX_DEBUG_H
 #define CLOX_DEBUG_H
 
-#include "../chunk/chunk.h"
+#include "chunk/chunk.h"
 
 void disassembleChunk(Chunk* chunk, const char* name);
 int disassembleInstruction(Chunk* chunk, int offset);
