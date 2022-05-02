@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcl_debug.a  CMakeFiles/cl_debug.dir/src/debug/debug.c.o
-/usr/bin/ranlib libcl_debug.a
