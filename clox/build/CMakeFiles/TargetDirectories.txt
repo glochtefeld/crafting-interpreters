@@ -1,0 +1,7 @@
+/home/lochga01/Projects/crafting-interpreters/clox/build/CMakeFiles/edit_cache.dir
+/home/lochga01/Projects/crafting-interpreters/clox/build/CMakeFiles/clox.dir
+/home/lochga01/Projects/crafting-interpreters/clox/build/CMakeFiles/chunk.dir
+/home/lochga01/Projects/crafting-interpreters/clox/build/CMakeFiles/rebuild_cache.dir
+/home/lochga01/Projects/crafting-interpreters/clox/build/CMakeFiles/cl_debug.dir
+/home/lochga01/Projects/crafting-interpreters/clox/build/CMakeFiles/value.dir
+/home/lochga01/Projects/crafting-interpreters/clox/build/CMakeFiles/memory.dir

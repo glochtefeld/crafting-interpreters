@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lochga01/Projects/crafting-interpreters/clox/include/chunk/chunk.h
+../common.h
+/home/lochga01/Projects/crafting-interpreters/clox/include/common.h
+../value.h
+/home/lochga01/Projects/crafting-interpreters/clox/include/value.h
+
+/home/lochga01/Projects/crafting-interpreters/clox/include/common.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
+/home/lochga01/Projects/crafting-interpreters/clox/include/debug/debug.h
+../chunk/chunk.h
+/home/lochga01/Projects/crafting-interpreters/clox/include/chunk/chunk.h
+
+/home/lochga01/Projects/crafting-interpreters/clox/include/value.h
+common.h
+/home/lochga01/Projects/crafting-interpreters/clox/include/common.h
+
+/home/lochga01/Projects/crafting-interpreters/clox/src/main.c
+../include/common.h
+/home/lochga01/Projects/crafting-interpreters/clox/include/common.h
+../include/chunk/chunk.h
+/home/lochga01/Projects/crafting-interpreters/clox/include/chunk/chunk.h
+../include/debug/debug.h
+/home/lochga01/Projects/crafting-interpreters/clox/include/debug/debug.h
+
