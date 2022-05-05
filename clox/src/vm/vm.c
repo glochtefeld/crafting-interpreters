@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include "debug/debug.h"
 #include "vm/vm.h"
+#include "debug/debug.h"
+#include "compiler/compiler.h"
 
 static void resetStack();
 static InterpretResult run();
@@ -14,10 +15,9 @@ void initVM() {
 void freeVM() {
 }
 
-InterpretResult interpret(Chunk* chunk) {
-    vm.chunk = chunk;
-    vm.ip = vm.chunk->code;
-    return run();
+InterpretResult interpret(const char* source) {
+    compile(source);
+    return INTERPET_OK;
 }
 
 static InterpretResult run() {

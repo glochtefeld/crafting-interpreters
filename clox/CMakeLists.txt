@@ -22,6 +22,7 @@ target_include_directories(chunk PUBLIC include)
 target_link_libraries(chunk PRIVATE memory)
 target_link_libraries(chunk PRIVATE value)
 
+
 add_library(vm
     src/vm/vm.c
     include/vm/vm.h
@@ -36,9 +37,23 @@ add_library(cl_debug
 target_link_libraries(cl_debug PRIVATE chunk)
 target_link_libraries(cl_debug PRIVATE vm)
 
+add_library(scanner
+    src/scanner/scanner.c
+    include/scanner/scanner.h
+)
+target_include_directories(scanner PUBLIC include)
+
+add_library(compiler
+    src/compiler/compiler.c
+    include/compiler/compiler.h
+)
+target_include_directories(compiler PUBLIC include)
+target_link_libraries(compiler PRIVATE scanner)
+
 add_executable(clox src/main.c 
     include/common.h
 )
 target_link_libraries(clox PRIVATE chunk)
 target_link_libraries(clox PRIVATE vm)
 target_link_libraries(clox PRIVATE cl_debug)
+target_link_libraries(clox PRIVATE compiler)
