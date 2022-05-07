@@ -50,6 +50,7 @@ add_library(compiler
 target_include_directories(compiler PUBLIC include)
 target_link_libraries(compiler PRIVATE vm)
 target_link_libraries(compiler PRIVATE scanner)
+target_link_libraries(compiler PRIVATE cl_debug)
 
 add_executable(clox src/main.c 
     include/common.h
