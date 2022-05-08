@@ -5,12 +5,15 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_library(memory
     src/memory.c
     include/memory.h
+    include/object.h
 )
 target_include_directories(memory PUBLIC include)
 
 add_library(value
     src/value.c
+    src/object.c
     include/value.h
+    include/object.h
 )
 target_link_libraries(value PRIVATE memory)
 
@@ -29,6 +32,7 @@ add_library(vm
 )
 target_include_directories(vm PUBLIC include)
 target_link_libraries(vm PRIVATE chunk)
+target_link_libraries(vm PRIVATE memory)
 
 add_library(cl_debug
     src/debug/debug.c

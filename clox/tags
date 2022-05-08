@@ -4,6 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOCATE	include/memory.h	6;"	d
+ALLOCATE_OBJ	src/object.c	9;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	447;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	450;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	453;"	d	file:
@@ -34,13 +36,20 @@ ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	531;"	d	f
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	534;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	537;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	540;"	d	file:
-BINARY_OP	src/vm/vm.c	39;"	d	file:
-BINARY_OP	src/vm/vm.c	79;"	d	file:
+AS_BOOL	include/value.h	35;"	d
+AS_CSTRING	include/object.h	10;"	d
+AS_NUMBER	include/value.h	36;"	d
+AS_OBJ	include/value.h	37;"	d
+AS_STRING	include/object.h	9;"	d
+BINARY_OP	src/vm/vm.c	121;"	d	file:
+BINARY_OP	src/vm/vm.c	48;"	d	file:
+BOOL_VAL	include/value.h	25;"	d
 CLOX_CHUNK_H	include/chunk/chunk.h	2;"	d
 CLOX_COMMON_H	include/common.h	2;"	d
 CLOX_COMPILER_H	include/compiler/compiler.h	2;"	d
 CLOX_DEBUG_H	include/debug/debug.h	2;"	d
 CLOX_MEMORY_H	include/memory.h	2;"	d
+CLOX_OBJECT_H	include/object.h	2;"	d
 CLOX_SCANNER_H	include/scanner/scanner.h	2;"	d
 CLOX_VALUE_H	include/value.h	2;"	d
 CLOX_VM_H	include/vm/vm.h	2;"	d
@@ -186,22 +195,44 @@ DEBUG_PRINT_CODE	include/common.h	11;"	d
 DEBUG_TRACE_EXECUTION	include/common.h	12;"	d
 DEC	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	544;"	d	file:
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
-FREE_ARRAY	include/memory.h	14;"	d
-GROW_ARRAY	include/memory.h	8;"	d
-GROW_CAPACITY	include/memory.h	5;"	d
+FREE_ARRAY	include/memory.h	18;"	d
+GROW_ARRAY	include/memory.h	12;"	d
+GROW_CAPACITY	include/memory.h	9;"	d
 HEX	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	555;"	d	file:
 ID_VOID_MAIN	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
-INTERPET_OK	include/vm/vm.h	/^    INTERPET_OK,$/;"	e	enum:__anon11
-INTERPRET_COMPILE_ERROR	include/vm/vm.h	/^    INTERPRET_COMPILE_ERROR,$/;"	e	enum:__anon11
-INTERPRET_RUNTIME_ERROR	include/vm/vm.h	/^    INTERPRET_RUNTIME_ERROR$/;"	e	enum:__anon11
-InterpretResult	include/vm/vm.h	/^} InterpretResult;$/;"	t	typeref:enum:__anon11
+INTERPET_OK	include/vm/vm.h	/^    INTERPET_OK,$/;"	e	enum:__anon15
+INTERPRET_COMPILE_ERROR	include/vm/vm.h	/^    INTERPRET_COMPILE_ERROR,$/;"	e	enum:__anon15
+INTERPRET_RUNTIME_ERROR	include/vm/vm.h	/^    INTERPRET_RUNTIME_ERROR$/;"	e	enum:__anon15
+IS_BOOL	include/value.h	30;"	d
+IS_NIL	include/value.h	31;"	d
+IS_NUMBER	include/value.h	32;"	d
+IS_OBJ	include/value.h	33;"	d
+IS_STRING	include/object.h	8;"	d
+InterpretResult	include/vm/vm.h	/^} InterpretResult;$/;"	t	typeref:enum:__anon15
+NIL_VAL	include/value.h	26;"	d
+NUMBER_VAL	include/value.h	27;"	d
+OBJ_STRING	include/object.h	/^    OBJ_STRING,$/;"	e	enum:__anon9
+OBJ_TYPE	include/object.h	7;"	d
+OBJ_VAL	include/value.h	28;"	d
 OP_ADD	include/chunk/chunk.h	/^    OP_ADD,$/;"	e	enum:__anon7
 OP_CONSTANT	include/chunk/chunk.h	/^    OP_CONSTANT,$/;"	e	enum:__anon7
 OP_DIVIDE	include/chunk/chunk.h	/^    OP_DIVIDE,$/;"	e	enum:__anon7
+OP_EQUAL	include/chunk/chunk.h	/^    OP_EQUAL,$/;"	e	enum:__anon7
+OP_FALSE	include/chunk/chunk.h	/^    OP_FALSE,$/;"	e	enum:__anon7
+OP_GREATER	include/chunk/chunk.h	/^    OP_GREATER,$/;"	e	enum:__anon7
+OP_LESS	include/chunk/chunk.h	/^    OP_LESS,$/;"	e	enum:__anon7
 OP_MULTIPLY	include/chunk/chunk.h	/^    OP_MULTIPLY,$/;"	e	enum:__anon7
 OP_NEGATE	include/chunk/chunk.h	/^    OP_NEGATE,$/;"	e	enum:__anon7
+OP_NIL	include/chunk/chunk.h	/^    OP_NIL,$/;"	e	enum:__anon7
+OP_NOT	include/chunk/chunk.h	/^    OP_NOT,$/;"	e	enum:__anon7
 OP_RETURN	include/chunk/chunk.h	/^    OP_RETURN,$/;"	e	enum:__anon7
 OP_SUBTRACT	include/chunk/chunk.h	/^    OP_SUBTRACT,$/;"	e	enum:__anon7
+OP_TRUE	include/chunk/chunk.h	/^    OP_TRUE,$/;"	e	enum:__anon7
+Obj	include/object.h	/^struct Obj {$/;"	s
+Obj	include/value.h	/^typedef struct Obj Obj;$/;"	t	typeref:struct:Obj
+ObjString	include/object.h	/^struct ObjString {$/;"	s
+ObjString	include/value.h	/^typedef struct ObjString ObjString;$/;"	t	typeref:struct:ObjString
+ObjType	include/object.h	/^} ObjType;$/;"	t	typeref:enum:__anon9
 OpCode	include/chunk/chunk.h	/^} OpCode;$/;"	t	typeref:enum:__anon7
 PLATFORM_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	339;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	342;"	d	file:
@@ -250,10 +281,10 @@ ParseFn	src/compiler/compiler.c	/^typedef void (*ParseFn)();$/;"	t	file:
 ParseRule	src/compiler/compiler.c	/^} ParseRule;$/;"	t	typeref:struct:__anon4	file:
 Parser	src/compiler/compiler.c	/^} Parser;$/;"	t	typeref:struct:__anon2	file:
 Precedence	src/compiler/compiler.c	/^} Precedence;$/;"	t	typeref:enum:__anon3	file:
-READ_BYTE	src/vm/vm.c	37;"	d	file:
-READ_BYTE	src/vm/vm.c	77;"	d	file:
-READ_CONSTANT	src/vm/vm.c	38;"	d	file:
-READ_CONSTANT	src/vm/vm.c	78;"	d	file:
+READ_BYTE	src/vm/vm.c	119;"	d	file:
+READ_BYTE	src/vm/vm.c	46;"	d	file:
+READ_CONSTANT	src/vm/vm.c	120;"	d	file:
+READ_CONSTANT	src/vm/vm.c	47;"	d	file:
 RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	209;"	d	file:
@@ -317,26 +348,38 @@ TOKEN_VAR	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;
 TOKEN_WHILE	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;"	e	enum:__anon5
 Token	include/scanner/scanner.h	/^} Token;$/;"	t	typeref:struct:__anon6
 TokenType	include/scanner/scanner.h	/^} TokenType;$/;"	t	typeref:enum:__anon5
-VM	include/vm/vm.h	/^} VM;$/;"	t	typeref:struct:__anon10
-Value	include/value.h	/^typedef double Value;$/;"	t
-ValueArray	include/value.h	/^} ValueArray;$/;"	t	typeref:struct:__anon9
+VAL_BOOL	include/value.h	/^    VAL_BOOL,$/;"	e	enum:__anon10
+VAL_NIL	include/value.h	/^    VAL_NIL,$/;"	e	enum:__anon10
+VAL_NUMBER	include/value.h	/^    VAL_NUMBER,$/;"	e	enum:__anon10
+VAL_OBJ	include/value.h	/^    VAL_OBJ$/;"	e	enum:__anon10
+VM	include/vm/vm.h	/^} VM;$/;"	t	typeref:struct:__anon14
+Value	include/value.h	/^} Value;$/;"	t	typeref:struct:__anon11
+ValueArray	include/value.h	/^} ValueArray;$/;"	t	typeref:struct:__anon13
+ValueType	include/value.h	/^} ValueType;$/;"	t	typeref:enum:__anon10
 addConstant	src/chunk/chunk.c	/^int addConstant(Chunk* chunk, Value value) {$/;"	f
 advance	src/compiler/compiler.c	/^static void advance() {$/;"	f	file:
 advance	src/scanner/scanner.c	/^static char advance() {$/;"	f	file:
+allocateObject	src/object.c	/^static Obj* allocateObject(size_t size, ObjType type) {$/;"	f	file:
+allocateString	src/object.c	/^static ObjString* allocateString(char* chars, int length) {$/;"	f	file:
+as	include/value.h	/^    } as;$/;"	m	struct:__anon11	typeref:union:__anon11::__anon12
 binary	src/compiler/compiler.c	/^static void binary() {$/;"	f	file:
+boolean	include/value.h	/^        bool boolean;$/;"	m	union:__anon11::__anon12
 capacity	include/chunk/chunk.h	/^    int capacity;$/;"	m	struct:__anon8
-capacity	include/value.h	/^    int capacity;$/;"	m	struct:__anon9
+capacity	include/value.h	/^    int capacity;$/;"	m	struct:__anon13
+chars	include/object.h	/^    char* chars;$/;"	m	struct:ObjString
 checkKeyword	src/scanner/scanner.c	/^static TokenType checkKeyword(int start, int length, const char* rest, TokenType type) {$/;"	f	file:
-chunk	include/vm/vm.h	/^    Chunk* chunk;$/;"	m	struct:__anon10
+chunk	include/vm/vm.h	/^    Chunk* chunk;$/;"	m	struct:__anon14
 code	include/chunk/chunk.h	/^    uint8_t* code;$/;"	m	struct:__anon8
 compile	src/compiler/compiler.c	/^bool compile(const char* source, Chunk* chunk) {$/;"	f
 compilingChunk	src/compiler/compiler.c	/^Chunk* compilingChunk;$/;"	v
+concatenate	src/vm/vm.c	/^static void concatenate() {$/;"	f	file:
 const	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
 constantInstruction	src/debug/debug.c	/^static int constantInstruction(const char* name, Chunk* chunk, int offset) {$/;"	f	file:
 constants	include/chunk/chunk.h	/^    ValueArray constants;$/;"	m	struct:__anon8
 consume	src/compiler/compiler.c	/^static void consume(TokenType type, const char* message) {$/;"	f	file:
+copyString	src/object.c	/^ObjString* copyString(const char* chars, int length) {$/;"	f
 count	include/chunk/chunk.h	/^    int count;$/;"	m	struct:__anon8
-count	include/value.h	/^    int count;$/;"	m	struct:__anon9
+count	include/value.h	/^    int count;$/;"	m	struct:__anon13
 current	src/compiler/compiler.c	/^    Token current;$/;"	m	struct:__anon2	file:
 current	src/scanner/scanner.c	/^    const char* current;$/;"	m	struct:__anon1	file:
 currentChunk	src/compiler/compiler.c	/^static Chunk* currentChunk() {$/;"	f	file:
@@ -375,31 +418,42 @@ initScanner	src/scanner/scanner.c	/^void initScanner(const char* source) {$/;"	f
 initVM	src/vm/vm.c	/^void initVM() {$/;"	f
 initValueArray	src/value.c	/^void initValueArray(ValueArray* array) {$/;"	f
 interpret	src/vm/vm.c	/^InterpretResult interpret(const char* source) {$/;"	f
-ip	include/vm/vm.h	/^    uint8_t* ip;$/;"	m	struct:__anon10
+ip	include/vm/vm.h	/^    uint8_t* ip;$/;"	m	struct:__anon14
 isAlpha	src/scanner/scanner.c	/^static bool isAlpha(char c) {$/;"	f	file:
 isAtEnd	src/scanner/scanner.c	/^static bool isAtEnd() {$/;"	f	file:
 isDigit	src/scanner/scanner.c	/^static bool isDigit(char c) {$/;"	f	file:
+isFalsey	src/vm/vm.c	/^static bool isFalsey(Value value) {$/;"	f	file:
+isObjType	include/object.h	/^static inline bool isObjType(Value value, ObjType type) {$/;"	f
+length	include/object.h	/^    int length;$/;"	m	struct:ObjString
 length	include/scanner/scanner.h	/^    int length;$/;"	m	struct:__anon6
 line	include/scanner/scanner.h	/^    int line;$/;"	m	struct:__anon6
 line	src/scanner/scanner.c	/^    int line;$/;"	m	struct:__anon1	file:
 lines	include/chunk/chunk.h	/^    int* lines;$/;"	m	struct:__anon8
+literal	src/compiler/compiler.c	/^static void literal() {$/;"	f	file:
 main	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
 main	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	src/main.c	/^int main(int argc, const char* argv[]) {$/;"	f
 makeConstant	src/compiler/compiler.c	/^static uint8_t makeConstant(Value value) {$/;"	f	file:
 makeToken	src/scanner/scanner.c	/^static Token makeToken(TokenType type) {$/;"	f	file:
 match	src/scanner/scanner.c	/^static bool match(char expected) {$/;"	f	file:
+next	include/object.h	/^    struct Obj* next;$/;"	m	struct:Obj	typeref:struct:Obj::Obj
+number	include/value.h	/^        double number;$/;"	m	union:__anon11::__anon12
 number	src/compiler/compiler.c	/^static void number() {$/;"	f	file:
 number	src/scanner/scanner.c	/^static Token number() {$/;"	f	file:
+obj	include/object.h	/^    Obj obj;$/;"	m	struct:ObjString
+obj	include/value.h	/^        Obj* obj;$/;"	m	union:__anon11::__anon12
+objects	include/vm/vm.h	/^    Obj* objects;$/;"	m	struct:__anon14
 panicMode	src/compiler/compiler.c	/^    bool panicMode;$/;"	m	struct:__anon2	file:
 parsePrecedence	src/compiler/compiler.c	/^static void parsePrecedence(Precedence precedence) {$/;"	f	file:
 parser	src/compiler/compiler.c	/^Parser parser;$/;"	v
 peek	src/scanner/scanner.c	/^static char peek() {$/;"	f	file:
+peek	src/vm/vm.c	/^static Value peek(int distance) {$/;"	f	file:
 peekNext	src/scanner/scanner.c	/^static char peekNext() {$/;"	f	file:
 pop	src/vm/vm.c	/^Value pop() {$/;"	f
 precedence	src/compiler/compiler.c	/^    Precedence precedence;$/;"	m	struct:__anon4	file:
 prefix	src/compiler/compiler.c	/^    ParseFn prefix;$/;"	m	struct:__anon4	file:
 previous	src/compiler/compiler.c	/^    Token previous;$/;"	m	struct:__anon2	file:
+printObject	src/object.c	/^void printObject(Value value) {$/;"	f
 printValue	src/value.c	/^void printValue(Value value) {$/;"	f
 push	src/vm/vm.c	/^void push(Value value) {$/;"	f
 qnxnto	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
@@ -411,18 +465,24 @@ rules	src/compiler/compiler.c	/^ParseRule rules[] = {$/;"	v
 rules	src/compiler/compiler.c	/^ParseRule rules[];$/;"	v
 run	src/vm/vm.c	/^static InterpretResult run() {$/;"	f	file:
 runFile	src/main.c	/^static void runFile(const char* path) {$/;"	f	file:
+runtimeError	src/vm/vm.c	/^static void runtimeError(const char* format, ...) {$/;"	f	file:
 scanToken	src/scanner/scanner.c	/^Token scanToken() {$/;"	f
 scanner	src/scanner/scanner.c	/^Scanner scanner;$/;"	v
 simpleInstruction	src/debug/debug.c	/^static int simpleInstruction(const char* name, int offset) {$/;"	f	file:
 skipWhitespace	src/scanner/scanner.c	/^static void skipWhitespace() {$/;"	f	file:
-stack	include/vm/vm.h	/^    Value stack[STACK_MAX];$/;"	m	struct:__anon10
-stackTop	include/vm/vm.h	/^    Value* stackTop;$/;"	m	struct:__anon10
+stack	include/vm/vm.h	/^    Value stack[STACK_MAX];$/;"	m	struct:__anon14
+stackTop	include/vm/vm.h	/^    Value* stackTop;$/;"	m	struct:__anon14
 start	include/scanner/scanner.h	/^    const char* start;$/;"	m	struct:__anon6
 start	src/scanner/scanner.c	/^    const char* start;$/;"	m	struct:__anon1	file:
+string	src/compiler/compiler.c	/^static void string() {$/;"	f	file:
 string	src/scanner/scanner.c	/^static Token string() {$/;"	f	file:
+takeString	src/object.c	/^ObjString* takeString(char* chars, int length) {$/;"	f
+type	include/object.h	/^    ObjType type;$/;"	m	struct:Obj
 type	include/scanner/scanner.h	/^    TokenType type;$/;"	m	struct:__anon6
+type	include/value.h	/^    ValueType type;$/;"	m	struct:__anon11
 unary	src/compiler/compiler.c	/^static void unary() {$/;"	f	file:
-values	include/value.h	/^    Value* values;$/;"	m	struct:__anon9
+values	include/value.h	/^    Value* values;$/;"	m	struct:__anon13
+valuesEqual	src/value.c	/^bool valuesEqual(Value a, Value b) {$/;"	f
 vm	src/vm/vm.c	/^VM vm;$/;"	v
 volatile	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
 writeChunk	src/chunk/chunk.c	/^void writeChunk(Chunk* chunk, uint8_t byte, int line) {$/;"	f
