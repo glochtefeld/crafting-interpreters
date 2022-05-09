@@ -17,6 +17,14 @@ add_library(value
 )
 target_link_libraries(value PRIVATE memory)
 
+add_library(hash
+    src/hash/hashtable.c
+    include/hash/hashtable.h
+)
+target_include_directories(hash PUBLIC include)
+target_link_libraries(hash PRIVATE memory)
+target_link_libraries(hash PRIVATE value)
+
 add_library(chunk
     src/chunk/chunk.c
     include/chunk/chunk.h
