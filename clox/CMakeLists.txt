@@ -41,6 +41,7 @@ add_library(vm
 target_include_directories(vm PUBLIC include)
 target_link_libraries(vm PRIVATE chunk)
 target_link_libraries(vm PRIVATE memory)
+target_link_libraries(vm PRIVATE hash)
 
 add_library(cl_debug
     src/debug/debug.c
