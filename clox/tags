@@ -4,8 +4,8 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-ALLOCATE	include/memory.h	6;"	d
-ALLOCATE_OBJ	src/object.c	9;"	d	file:
+ALLOCATE	include/memory.h	7;"	d
+ALLOCATE_OBJ	src/object.c	10;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	447;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	450;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	453;"	d	file:
@@ -41,13 +41,14 @@ AS_CSTRING	include/object.h	10;"	d
 AS_NUMBER	include/value.h	36;"	d
 AS_OBJ	include/value.h	37;"	d
 AS_STRING	include/object.h	9;"	d
-BINARY_OP	src/vm/vm.c	121;"	d	file:
-BINARY_OP	src/vm/vm.c	48;"	d	file:
+BINARY_OP	src/vm/vm.c	157;"	d	file:
+BINARY_OP	src/vm/vm.c	54;"	d	file:
 BOOL_VAL	include/value.h	25;"	d
 CLOX_CHUNK_H	include/chunk/chunk.h	2;"	d
 CLOX_COMMON_H	include/common.h	2;"	d
 CLOX_COMPILER_H	include/compiler/compiler.h	2;"	d
 CLOX_DEBUG_H	include/debug/debug.h	2;"	d
+CLOX_HASHTABLE_H	include/hash/hashtable.h	2;"	d
 CLOX_MEMORY_H	include/memory.h	2;"	d
 CLOX_OBJECT_H	include/object.h	2;"	d
 CLOX_SCANNER_H	include/scanner/scanner.h	2;"	d
@@ -195,9 +196,11 @@ DEBUG_PRINT_CODE	include/common.h	11;"	d
 DEBUG_TRACE_EXECUTION	include/common.h	12;"	d
 DEC	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	544;"	d	file:
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
-FREE_ARRAY	include/memory.h	18;"	d
-GROW_ARRAY	include/memory.h	12;"	d
-GROW_CAPACITY	include/memory.h	9;"	d
+Entry	include/hash/hashtable.h	/^} Entry;$/;"	t	typeref:struct:__anon16
+FREE	include/memory.h	9;"	d
+FREE_ARRAY	include/memory.h	21;"	d
+GROW_ARRAY	include/memory.h	14;"	d
+GROW_CAPACITY	include/memory.h	11;"	d
 HEX	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	555;"	d	file:
 ID_VOID_MAIN	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
 INTERPET_OK	include/vm/vm.h	/^    INTERPET_OK,$/;"	e	enum:__anon15
@@ -216,16 +219,21 @@ OBJ_TYPE	include/object.h	7;"	d
 OBJ_VAL	include/value.h	28;"	d
 OP_ADD	include/chunk/chunk.h	/^    OP_ADD,$/;"	e	enum:__anon7
 OP_CONSTANT	include/chunk/chunk.h	/^    OP_CONSTANT,$/;"	e	enum:__anon7
+OP_DEFINE_GLOBAL	include/chunk/chunk.h	/^    OP_DEFINE_GLOBAL,$/;"	e	enum:__anon7
 OP_DIVIDE	include/chunk/chunk.h	/^    OP_DIVIDE,$/;"	e	enum:__anon7
 OP_EQUAL	include/chunk/chunk.h	/^    OP_EQUAL,$/;"	e	enum:__anon7
 OP_FALSE	include/chunk/chunk.h	/^    OP_FALSE,$/;"	e	enum:__anon7
+OP_GET_GLOBAL	include/chunk/chunk.h	/^    OP_GET_GLOBAL,$/;"	e	enum:__anon7
 OP_GREATER	include/chunk/chunk.h	/^    OP_GREATER,$/;"	e	enum:__anon7
 OP_LESS	include/chunk/chunk.h	/^    OP_LESS,$/;"	e	enum:__anon7
 OP_MULTIPLY	include/chunk/chunk.h	/^    OP_MULTIPLY,$/;"	e	enum:__anon7
 OP_NEGATE	include/chunk/chunk.h	/^    OP_NEGATE,$/;"	e	enum:__anon7
 OP_NIL	include/chunk/chunk.h	/^    OP_NIL,$/;"	e	enum:__anon7
 OP_NOT	include/chunk/chunk.h	/^    OP_NOT,$/;"	e	enum:__anon7
+OP_POP	include/chunk/chunk.h	/^    OP_POP,$/;"	e	enum:__anon7
+OP_PRINT	include/chunk/chunk.h	/^    OP_PRINT,$/;"	e	enum:__anon7
 OP_RETURN	include/chunk/chunk.h	/^    OP_RETURN,$/;"	e	enum:__anon7
+OP_SET_GLOBAL	include/chunk/chunk.h	/^    OP_SET_GLOBAL,$/;"	e	enum:__anon7
 OP_SUBTRACT	include/chunk/chunk.h	/^    OP_SUBTRACT,$/;"	e	enum:__anon7
 OP_TRUE	include/chunk/chunk.h	/^    OP_TRUE,$/;"	e	enum:__anon7
 Obj	include/object.h	/^struct Obj {$/;"	s
@@ -281,10 +289,12 @@ ParseFn	src/compiler/compiler.c	/^typedef void (*ParseFn)();$/;"	t	file:
 ParseRule	src/compiler/compiler.c	/^} ParseRule;$/;"	t	typeref:struct:__anon4	file:
 Parser	src/compiler/compiler.c	/^} Parser;$/;"	t	typeref:struct:__anon2	file:
 Precedence	src/compiler/compiler.c	/^} Precedence;$/;"	t	typeref:enum:__anon3	file:
-READ_BYTE	src/vm/vm.c	119;"	d	file:
-READ_BYTE	src/vm/vm.c	46;"	d	file:
-READ_CONSTANT	src/vm/vm.c	120;"	d	file:
-READ_CONSTANT	src/vm/vm.c	47;"	d	file:
+READ_BYTE	src/vm/vm.c	154;"	d	file:
+READ_BYTE	src/vm/vm.c	51;"	d	file:
+READ_CONSTANT	src/vm/vm.c	156;"	d	file:
+READ_CONSTANT	src/vm/vm.c	52;"	d	file:
+READ_STRING	src/vm/vm.c	155;"	d	file:
+READ_STRING	src/vm/vm.c	53;"	d	file:
 RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	209;"	d	file:
@@ -301,11 +311,12 @@ SIMULATE_VERSION_MINOR	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	23
 SIMULATE_VERSION_MINOR	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	41;"	d	file:
 SIMULATE_VERSION_MINOR	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	49;"	d	file:
 SIMULATE_VERSION_PATCH	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	52;"	d	file:
-STACK_MAX	include/vm/vm.h	8;"	d
+STACK_MAX	include/vm/vm.h	9;"	d
 STRINGIFY	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	335;"	d	file:
 STRINGIFY_HELPER	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	334;"	d	file:
 SUFFIXES	build/Makefile	/^SUFFIXES =$/;"	m
 Scanner	src/scanner/scanner.c	/^} Scanner;$/;"	t	typeref:struct:__anon1	file:
+TABLE_MAX_LOAD	src/hash/hashtable.c	8;"	d	file:
 TOKEN_AND	include/scanner/scanner.h	/^    TOKEN_AND, TOKEN_CLASS, TOKEN_ELSE, TOKEN_FALSE,$/;"	e	enum:__anon5
 TOKEN_BANG	include/scanner/scanner.h	/^    TOKEN_BANG, TOKEN_BANG_EQUAL,$/;"	e	enum:__anon5
 TOKEN_BANG_EQUAL	include/scanner/scanner.h	/^    TOKEN_BANG, TOKEN_BANG_EQUAL,$/;"	e	enum:__anon5
@@ -346,6 +357,7 @@ TOKEN_THIS	include/scanner/scanner.h	/^    TOKEN_PRINT, TOKEN_RETURN, TOKEN_SUPE
 TOKEN_TRUE	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;"	e	enum:__anon5
 TOKEN_VAR	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;"	e	enum:__anon5
 TOKEN_WHILE	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;"	e	enum:__anon5
+Table	include/hash/hashtable.h	/^} Table;$/;"	t	typeref:struct:__anon17
 Token	include/scanner/scanner.h	/^} Token;$/;"	t	typeref:struct:__anon6
 TokenType	include/scanner/scanner.h	/^} TokenType;$/;"	t	typeref:enum:__anon5
 VAL_BOOL	include/value.h	/^    VAL_BOOL,$/;"	e	enum:__anon10
@@ -357,16 +369,19 @@ Value	include/value.h	/^} Value;$/;"	t	typeref:struct:__anon11
 ValueArray	include/value.h	/^} ValueArray;$/;"	t	typeref:struct:__anon13
 ValueType	include/value.h	/^} ValueType;$/;"	t	typeref:enum:__anon10
 addConstant	src/chunk/chunk.c	/^int addConstant(Chunk* chunk, Value value) {$/;"	f
+adjustCapacity	src/hash/hashtable.c	/^static void adjustCapacity(Table* table, int capacity) {$/;"	f	file:
 advance	src/compiler/compiler.c	/^static void advance() {$/;"	f	file:
 advance	src/scanner/scanner.c	/^static char advance() {$/;"	f	file:
 allocateObject	src/object.c	/^static Obj* allocateObject(size_t size, ObjType type) {$/;"	f	file:
-allocateString	src/object.c	/^static ObjString* allocateString(char* chars, int length) {$/;"	f	file:
+allocateString	src/object.c	/^static ObjString* allocateString(char* chars, int length, uint32_t hash) {$/;"	f	file:
 as	include/value.h	/^    } as;$/;"	m	struct:__anon11	typeref:union:__anon11::__anon12
 binary	src/compiler/compiler.c	/^static void binary() {$/;"	f	file:
 boolean	include/value.h	/^        bool boolean;$/;"	m	union:__anon11::__anon12
 capacity	include/chunk/chunk.h	/^    int capacity;$/;"	m	struct:__anon8
+capacity	include/hash/hashtable.h	/^    int capacity;$/;"	m	struct:__anon17
 capacity	include/value.h	/^    int capacity;$/;"	m	struct:__anon13
 chars	include/object.h	/^    char* chars;$/;"	m	struct:ObjString
+check	src/compiler/compiler.c	/^static bool check(TokenType type) {$/;"	f	file:
 checkKeyword	src/scanner/scanner.c	/^static TokenType checkKeyword(int start, int length, const char* rest, TokenType type) {$/;"	f	file:
 chunk	include/vm/vm.h	/^    Chunk* chunk;$/;"	m	struct:__anon14
 code	include/chunk/chunk.h	/^    uint8_t* code;$/;"	m	struct:__anon8
@@ -379,10 +394,13 @@ constants	include/chunk/chunk.h	/^    ValueArray constants;$/;"	m	struct:__anon8
 consume	src/compiler/compiler.c	/^static void consume(TokenType type, const char* message) {$/;"	f	file:
 copyString	src/object.c	/^ObjString* copyString(const char* chars, int length) {$/;"	f
 count	include/chunk/chunk.h	/^    int count;$/;"	m	struct:__anon8
+count	include/hash/hashtable.h	/^    int count;$/;"	m	struct:__anon17
 count	include/value.h	/^    int count;$/;"	m	struct:__anon13
 current	src/compiler/compiler.c	/^    Token current;$/;"	m	struct:__anon2	file:
 current	src/scanner/scanner.c	/^    const char* current;$/;"	m	struct:__anon1	file:
 currentChunk	src/compiler/compiler.c	/^static Chunk* currentChunk() {$/;"	f	file:
+declaration	src/compiler/compiler.c	/^static void declaration() {$/;"	f	file:
+defineVariable	src/compiler/compiler.c	/^static void defineVariable(uint8_t global) {$/;"	f	file:
 disassembleChunk	src/debug/debug.c	/^void disassembleChunk(Chunk* chunk, const char* name) {$/;"	f
 disassembleInstruction	src/debug/debug.c	/^int disassembleInstruction(Chunk* chunk, int offset) {$/;"	f
 emitByte	src/compiler/compiler.c	/^static void emitByte(uint8_t byte) {$/;"	f	file:
@@ -390,18 +408,28 @@ emitBytes	src/compiler/compiler.c	/^static void emitBytes(uint8_t byte1, uint8_t
 emitConstant	src/compiler/compiler.c	/^static void emitConstant(Value value) {$/;"	f	file:
 emitReturn	src/compiler/compiler.c	/^static void emitReturn() { emitByte(OP_RETURN); }$/;"	f	file:
 endCompiler	src/compiler/compiler.c	/^static void endCompiler() { $/;"	f	file:
+entries	include/hash/hashtable.h	/^    Entry* entries;$/;"	m	struct:__anon17
 error	src/compiler/compiler.c	/^static void error(const char* message) {$/;"	f	file:
 errorAt	src/compiler/compiler.c	/^static void errorAt(Token* token, const char* message) {$/;"	f	file:
 errorAtCurrent	src/compiler/compiler.c	/^static void errorAtCurrent(const char* message) {$/;"	f	file:
 errorToken	src/scanner/scanner.c	/^static Token errorToken(const char* message) {$/;"	f	file:
 expression	src/compiler/compiler.c	/^static void expression() {$/;"	f	file:
+expressionStatement	src/compiler/compiler.c	/^static void expressionStatement() {$/;"	f	file:
+findEntry	src/hash/hashtable.c	/^static Entry* findEntry(Entry* entries, int capacity, ObjString* key) {$/;"	f	file:
 freeChunk	src/chunk/chunk.c	/^void freeChunk(Chunk* chunk) {$/;"	f
+freeObject	src/memory.c	/^static void freeObject(Obj* object) {$/;"	f	file:
+freeObjects	src/memory.c	/^void freeObjects() {$/;"	f
+freeTable	src/hash/hashtable.c	/^void freeTable(Table* table) {$/;"	f
 freeVM	src/vm/vm.c	/^void freeVM() {$/;"	f
 freeValueArray	src/value.c	/^void freeValueArray(ValueArray* array) {$/;"	f
 getRule	src/compiler/compiler.c	/^static ParseRule* getRule(TokenType type) {$/;"	f	file:
+globals	include/vm/vm.h	/^    Table globals;$/;"	m	struct:__anon14
 grouping	src/compiler/compiler.c	/^static void grouping() {$/;"	f	file:
 hadError	src/compiler/compiler.c	/^    bool hadError;$/;"	m	struct:__anon2	file:
+hash	include/object.h	/^    uint32_t hash;$/;"	m	struct:ObjString
+hashString	src/object.c	/^static uint32_t hashString(const char* key, int length) {$/;"	f	file:
 identifier	src/scanner/scanner.c	/^static Token identifier() {$/;"	f	file:
+identifierConstant	src/compiler/compiler.c	/^static uint8_t identifierConstant(Token* name) {$/;"	f	file:
 identifierType	src/scanner/scanner.c	/^static TokenType identifierType() {$/;"	f	file:
 infix	src/compiler/compiler.c	/^    ParseFn infix;$/;"	m	struct:__anon4	file:
 info_arch	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
@@ -415,6 +443,7 @@ info_version	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^char const
 info_version_internal	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v
 initChunk	src/chunk/chunk.c	/^void initChunk(Chunk* chunk) {$/;"	f
 initScanner	src/scanner/scanner.c	/^void initScanner(const char* source) {$/;"	f
+initTable	src/hash/hashtable.c	/^void initTable(Table* table) {$/;"	f
 initVM	src/vm/vm.c	/^void initVM() {$/;"	f
 initValueArray	src/value.c	/^void initValueArray(ValueArray* array) {$/;"	f
 interpret	src/vm/vm.c	/^InterpretResult interpret(const char* source) {$/;"	f
@@ -424,6 +453,7 @@ isAtEnd	src/scanner/scanner.c	/^static bool isAtEnd() {$/;"	f	file:
 isDigit	src/scanner/scanner.c	/^static bool isDigit(char c) {$/;"	f	file:
 isFalsey	src/vm/vm.c	/^static bool isFalsey(Value value) {$/;"	f	file:
 isObjType	include/object.h	/^static inline bool isObjType(Value value, ObjType type) {$/;"	f
+key	include/hash/hashtable.h	/^    ObjString* key;$/;"	m	struct:__anon16
 length	include/object.h	/^    int length;$/;"	m	struct:ObjString
 length	include/scanner/scanner.h	/^    int length;$/;"	m	struct:__anon6
 line	include/scanner/scanner.h	/^    int line;$/;"	m	struct:__anon6
@@ -435,7 +465,9 @@ main	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"
 main	src/main.c	/^int main(int argc, const char* argv[]) {$/;"	f
 makeConstant	src/compiler/compiler.c	/^static uint8_t makeConstant(Value value) {$/;"	f	file:
 makeToken	src/scanner/scanner.c	/^static Token makeToken(TokenType type) {$/;"	f	file:
+match	src/compiler/compiler.c	/^static bool match(TokenType type) {$/;"	f	file:
 match	src/scanner/scanner.c	/^static bool match(char expected) {$/;"	f	file:
+namedVariable	src/compiler/compiler.c	/^static void namedVariable(Token name) {$/;"	f	file:
 next	include/object.h	/^    struct Obj* next;$/;"	m	struct:Obj	typeref:struct:Obj::Obj
 number	include/value.h	/^        double number;$/;"	m	union:__anon11::__anon12
 number	src/compiler/compiler.c	/^static void number() {$/;"	f	file:
@@ -445,6 +477,7 @@ obj	include/value.h	/^        Obj* obj;$/;"	m	union:__anon11::__anon12
 objects	include/vm/vm.h	/^    Obj* objects;$/;"	m	struct:__anon14
 panicMode	src/compiler/compiler.c	/^    bool panicMode;$/;"	m	struct:__anon2	file:
 parsePrecedence	src/compiler/compiler.c	/^static void parsePrecedence(Precedence precedence) {$/;"	f	file:
+parseVariable	src/compiler/compiler.c	/^static uint8_t parseVariable(const char* errorMessage) {$/;"	f	file:
 parser	src/compiler/compiler.c	/^Parser parser;$/;"	v
 peek	src/scanner/scanner.c	/^static char peek() {$/;"	f	file:
 peek	src/vm/vm.c	/^static Value peek(int distance) {$/;"	f	file:
@@ -454,6 +487,7 @@ precedence	src/compiler/compiler.c	/^    Precedence precedence;$/;"	m	struct:__a
 prefix	src/compiler/compiler.c	/^    ParseFn prefix;$/;"	m	struct:__anon4	file:
 previous	src/compiler/compiler.c	/^    Token previous;$/;"	m	struct:__anon2	file:
 printObject	src/object.c	/^void printObject(Value value) {$/;"	f
+printStatement	src/compiler/compiler.c	/^static void printStatement() {$/;"	f	file:
 printValue	src/value.c	/^void printValue(Value value) {$/;"	f
 push	src/vm/vm.c	/^void push(Value value) {$/;"	f
 qnxnto	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
@@ -474,15 +508,26 @@ stack	include/vm/vm.h	/^    Value stack[STACK_MAX];$/;"	m	struct:__anon14
 stackTop	include/vm/vm.h	/^    Value* stackTop;$/;"	m	struct:__anon14
 start	include/scanner/scanner.h	/^    const char* start;$/;"	m	struct:__anon6
 start	src/scanner/scanner.c	/^    const char* start;$/;"	m	struct:__anon1	file:
+statement	src/compiler/compiler.c	/^static void statement() {$/;"	f	file:
 string	src/compiler/compiler.c	/^static void string() {$/;"	f	file:
 string	src/scanner/scanner.c	/^static Token string() {$/;"	f	file:
+strings	include/vm/vm.h	/^    Table strings;$/;"	m	struct:__anon14
+synchronize	src/compiler/compiler.c	/^static void synchronize() {$/;"	f	file:
+tableAddAll	src/hash/hashtable.c	/^void tableAddAll(Table* from, Table* to) {$/;"	f
+tableDelete	src/hash/hashtable.c	/^bool tableDelete(Table* table, ObjString* key) {$/;"	f
+tableFindString	src/hash/hashtable.c	/^ObjString* tableFindString(Table* table, const char* chars, int length, uint32_t hash) {$/;"	f
+tableGet	src/hash/hashtable.c	/^bool tableGet(Table* table, ObjString* key, Value* value) {$/;"	f
+tableSet	src/hash/hashtable.c	/^bool tableSet(Table* table, ObjString* key, Value value) {$/;"	f
 takeString	src/object.c	/^ObjString* takeString(char* chars, int length) {$/;"	f
 type	include/object.h	/^    ObjType type;$/;"	m	struct:Obj
 type	include/scanner/scanner.h	/^    TokenType type;$/;"	m	struct:__anon6
 type	include/value.h	/^    ValueType type;$/;"	m	struct:__anon11
 unary	src/compiler/compiler.c	/^static void unary() {$/;"	f	file:
+value	include/hash/hashtable.h	/^    Value value;$/;"	m	struct:__anon16
 values	include/value.h	/^    Value* values;$/;"	m	struct:__anon13
 valuesEqual	src/value.c	/^bool valuesEqual(Value a, Value b) {$/;"	f
+varDeclaration	src/compiler/compiler.c	/^static void varDeclaration() {$/;"	f	file:
+variable	src/compiler/compiler.c	/^static void variable() {$/;"	f	file:
 vm	src/vm/vm.c	/^VM vm;$/;"	v
 volatile	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
 writeChunk	src/chunk/chunk.c	/^void writeChunk(Chunk* chunk, uint8_t byte, int line) {$/;"	f
