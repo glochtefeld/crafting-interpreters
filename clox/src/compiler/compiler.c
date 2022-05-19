@@ -82,6 +82,7 @@ static void defineVariable(uint8_t global);
 static ParseRule* getRule(TokenType type);
 static void declaration();
 static void statement();
+static void ifStatement();
 static void expression();
 static void block();
 static void varDeclaration();
@@ -99,6 +100,8 @@ static void emitByte(uint8_t byte);
 static void emitConstant(Value value);
 static void emitReturn();
 static void emitBytes(uint8_t byte1, uint8_t byte2);
+static int emitJump(uint8_t code);
+static void patchJump(int offset);
 // Runtime
 static uint8_t makeConstant(Value value);
 // Error handling
@@ -309,13 +312,23 @@ static void varDeclaration() {
 static void statement() {
     if (match(TOKEN_PRINT)) {
         printStatement();
-    } else if (match(TOKEN_LEFT_BRACE)) {
+    } else if (match(TOKEN_IF)) {
+        ifStatement();
+    }else if (match(TOKEN_LEFT_BRACE)) {
         beginScope();
         block();
         endScope();
     } else {
         expressionStatement();
     }
+}
+static void ifStatement() {
+    consume(TOKEN_LEFT_PAREN, "Expect '(' after 'if'.");
+    expression();
+    consume(TOKEN_RIGHT_PAREN, "Expect ')' after condition.");
+    int thenJump = emitJump(OP_JUMP_IF_FALSE);
+    statement();
+    patchJump(thenJump);
 }
 static void expression() {
     parsePrecedence(PREC_ASSIGNMENT);
@@ -399,7 +412,20 @@ static void emitBytes(uint8_t byte1, uint8_t byte2) {
     emitByte(byte1);
     emitByte(byte2);
 }
-
+static int emitJump(uint8_t instruction) {
+    emitByte(instruction);
+    emitByte(0xff);
+    emitByte(0xff);
+    return currentChunk()->count - 2;
+}
+static void patchJump(int offset) {
+    int jump = currentChunk()->count - offset - 2;
+    if (jump > UINT16_MAX) {
+        error("Too much code to jump over!");
+    }
+    currentChunk()->code[offset] = (jump >> 8) & 0xff;
+    currentChunk()->code[offset + 1] = (jump >> 8) & 0xff;
+}
 // ---- Runtime ----
 static uint8_t makeConstant(Value value) {
     int constant = addConstant(currentChunk(), value);
