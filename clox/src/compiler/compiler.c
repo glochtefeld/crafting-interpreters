@@ -83,6 +83,8 @@ static ParseRule* getRule(TokenType type);
 static void declaration();
 static void statement();
 static void ifStatement();
+static void whileStatement();
+static void forStatement();
 static void expression();
 static void block();
 static void varDeclaration();
@@ -95,6 +97,8 @@ static void binary(bool canAssign);
 static void literal(bool canAssign);
 static void string(bool canAssign);
 static void variable(bool canAssign);
+static void and_(bool canAssign);
+static void or_(bool canAssign);
 // Byte emitters
 static void emitByte(uint8_t byte);
 static void emitConstant(Value value);
@@ -102,6 +106,7 @@ static void emitReturn();
 static void emitBytes(uint8_t byte1, uint8_t byte2);
 static int emitJump(uint8_t code);
 static void patchJump(int offset);
+static void emitLoop(int loopStart);
 // Runtime
 static uint8_t makeConstant(Value value);
 // Error handling
@@ -314,6 +319,10 @@ static void statement() {
         printStatement();
     } else if (match(TOKEN_IF)) {
         ifStatement();
+    } else if (match(TOKEN_WHILE)) {
+        whileStatement();
+    } else if (match(TOKEN_FOR)) {
+        forStatement();
     }else if (match(TOKEN_LEFT_BRACE)) {
         beginScope();
         block();
@@ -327,8 +336,38 @@ static void ifStatement() {
     expression();
     consume(TOKEN_RIGHT_PAREN, "Expect ')' after condition.");
     int thenJump = emitJump(OP_JUMP_IF_FALSE);
+    emitByte(OP_POP);
     statement();
     patchJump(thenJump);
+
+    int elseJump = emitJump(OP_JUMP);
+    if (match(TOKEN_ELSE)) statement();
+    patchJump(elseJump);
+    emitByte(OP_POP);
+}
+static void whileStatement() {
+    int loopStart = currentChunk()->count;
+    consume(TOKEN_LEFT_PAREN, "Expect '(' after 'while'.");
+    expression();
+    consume(TOKEN_RIGHT_PAREN, "Expect ')' after condition.");
+
+    int exitJump = emitJump(OP_JUMP_IF_FALSE);
+    emitByte(OP_POP);
+    statement();
+    emitLoop(loopStart);
+
+    patchJump(exitJump);
+    emitByte(OP_POP);
+}
+static void forStatement() {
+    consume(TOKEN_LEFT_PAREN, "Expect '(' after 'for'.");
+    consume(TOKEN_SEMICOLON, "Expect ';'.");
+
+    int loopStart = currentChunk()->count;
+    consume(TOKEN_SEMICOLON, "Expect ';'.");
+    consume(TOKEN_RIGHT_PAREN, "Expect ')' after for clauses.");
+    statement();
+    emitLoop(loopStart);
 }
 static void expression() {
     parsePrecedence(PREC_ASSIGNMENT);
@@ -399,6 +438,20 @@ static void string(bool canAssign) {
 static void variable(bool canAssign) {
     namedVariable(parser.previous, canAssign);
 }
+static void and_(bool canAssign) {
+    int endJump = emitJump(OP_JUMP_IF_FALSE);
+    emitByte(OP_POP);
+    parsePrecedence(PREC_AND);
+    patchJump(endJump);
+}
+static void or_(bool canAssign) {
+    int elseJump = emitJump(OP_JUMP_IF_FALSE);
+    int endJump = emitJump(OP_JUMP);
+    patchJump(elseJump);
+    emitByte(OP_POP);
+    parsePrecedence(PREC_OR);
+    patchJump(endJump);
+}
 
 // ---- Byte Emitters ----
 static void emitByte(uint8_t byte) {
@@ -426,6 +479,14 @@ static void patchJump(int offset) {
     currentChunk()->code[offset] = (jump >> 8) & 0xff;
     currentChunk()->code[offset + 1] = (jump >> 8) & 0xff;
 }
+static void emitLoop(int loopStart) {
+    emitByte(OP_LOOP);
+    int offset = currentChunk()->count - loopStart + 2;
+    if (offset > UINT16_MAX) error("Loop body too large.");
+    emitByte((offset >> 8) & 0xff);
+    emitByte(offset & 0xff);
+}
+
 // ---- Runtime ----
 static uint8_t makeConstant(Value value) {
     int constant = addConstant(currentChunk(), value);
@@ -482,7 +543,7 @@ ParseRule rules[] = {
     [TOKEN_IDENTIFIER]      = {variable,    NULL,   PREC_NONE},
     [TOKEN_STRING]          = {string,      NULL,   PREC_NONE},
     [TOKEN_NUMBER]          = {number,      NULL,   PREC_NONE},
-    [TOKEN_AND]             = {NULL,        NULL,   PREC_NONE},
+    [TOKEN_AND]             = {NULL,        and_,   PREC_NONE},
     [TOKEN_CLASS]           = {NULL,        NULL,   PREC_NONE},
     [TOKEN_ELSE]            = {NULL,        NULL,   PREC_NONE},
     [TOKEN_FALSE]           = {literal,     NULL,   PREC_NONE},
@@ -490,7 +551,7 @@ ParseRule rules[] = {
     [TOKEN_FUN]             = {NULL,        NULL,   PREC_NONE},
     [TOKEN_IF]              = {NULL,        NULL,   PREC_NONE},
     [TOKEN_NIL]             = {literal,     NULL,   PREC_NONE},
-    [TOKEN_OR]              = {NULL,        NULL,   PREC_NONE},
+    [TOKEN_OR]              = {NULL,        or_,    PREC_NONE},
     [TOKEN_PRINT]           = {NULL,        NULL,   PREC_NONE},
     [TOKEN_RETURN]          = {NULL,        NULL,   PREC_NONE},
     [TOKEN_SUPER]           = {NULL,        NULL,   PREC_NONE},
