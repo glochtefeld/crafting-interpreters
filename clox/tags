@@ -37,12 +37,13 @@ ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	534;"	d	f
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	537;"	d	file:
 ARCHITECTURE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	540;"	d	file:
 AS_BOOL	include/value.h	35;"	d
-AS_CSTRING	include/object.h	10;"	d
+AS_CSTRING	include/object.h	13;"	d
+AS_FUNCTION	include/object.h	11;"	d
 AS_NUMBER	include/value.h	36;"	d
 AS_OBJ	include/value.h	37;"	d
-AS_STRING	include/object.h	9;"	d
-BINARY_OP	src/vm/vm.c	184;"	d	file:
-BINARY_OP	src/vm/vm.c	55;"	d	file:
+AS_STRING	include/object.h	12;"	d
+BINARY_OP	src/vm/vm.c	185;"	d	file:
+BINARY_OP	src/vm/vm.c	56;"	d	file:
 BOOL_VAL	include/value.h	25;"	d
 CLOX_CHUNK_H	include/chunk/chunk.h	2;"	d
 CLOX_COMMON_H	include/common.h	2;"	d
@@ -191,64 +192,68 @@ C_DIALECT	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	625;"	d	file:
 C_DIALECT	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	628;"	d	file:
 C_DIALECT	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	630;"	d	file:
 C_DIALECT	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	632;"	d	file:
-Chunk	include/chunk/chunk.h	/^} Chunk;$/;"	t	typeref:struct:__anon10
-Compiler	src/compiler/compiler.c	/^} Compiler;$/;"	t	typeref:struct:__anon6	file:
+Chunk	include/chunk/chunk.h	/^} Chunk;$/;"	t	typeref:struct:__anon11
+Compiler	src/compiler/compiler.c	/^} Compiler;$/;"	t	typeref:struct:__anon7	file:
 DEBUG_PRINT_CODE	include/common.h	11;"	d
 DEBUG_TRACE_EXECUTION	include/common.h	12;"	d
 DEC	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	544;"	d	file:
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
-Entry	include/hash/hashtable.h	/^} Entry;$/;"	t	typeref:struct:__anon18
+Entry	include/hash/hashtable.h	/^} Entry;$/;"	t	typeref:struct:__anon20
 FREE	include/memory.h	9;"	d
 FREE_ARRAY	include/memory.h	21;"	d
+FunctionType	src/compiler/compiler.c	/^} FunctionType;$/;"	t	typeref:enum:__anon6	file:
 GROW_ARRAY	include/memory.h	14;"	d
 GROW_CAPACITY	include/memory.h	11;"	d
 HEX	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	555;"	d	file:
 ID_VOID_MAIN	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
-INTERPET_OK	include/vm/vm.h	/^    INTERPET_OK,$/;"	e	enum:__anon17
-INTERPRET_COMPILE_ERROR	include/vm/vm.h	/^    INTERPRET_COMPILE_ERROR,$/;"	e	enum:__anon17
-INTERPRET_RUNTIME_ERROR	include/vm/vm.h	/^    INTERPRET_RUNTIME_ERROR$/;"	e	enum:__anon17
+INTERPET_OK	include/vm/vm.h	/^    INTERPET_OK,$/;"	e	enum:__anon19
+INTERPRET_COMPILE_ERROR	include/vm/vm.h	/^    INTERPRET_COMPILE_ERROR,$/;"	e	enum:__anon19
+INTERPRET_RUNTIME_ERROR	include/vm/vm.h	/^    INTERPRET_RUNTIME_ERROR$/;"	e	enum:__anon19
 IS_BOOL	include/value.h	30;"	d
+IS_FUNCTION	include/object.h	9;"	d
 IS_NIL	include/value.h	31;"	d
 IS_NUMBER	include/value.h	32;"	d
 IS_OBJ	include/value.h	33;"	d
-IS_STRING	include/object.h	8;"	d
-InterpretResult	include/vm/vm.h	/^} InterpretResult;$/;"	t	typeref:enum:__anon17
+IS_STRING	include/object.h	10;"	d
+InterpretResult	include/vm/vm.h	/^} InterpretResult;$/;"	t	typeref:enum:__anon19
 Local	src/compiler/compiler.c	/^} Local;$/;"	t	typeref:struct:__anon5	file:
 NIL_VAL	include/value.h	26;"	d
 NUMBER_VAL	include/value.h	27;"	d
-OBJ_STRING	include/object.h	/^    OBJ_STRING,$/;"	e	enum:__anon11
-OBJ_TYPE	include/object.h	7;"	d
+OBJ_FUNCTION	include/object.h	/^    OBJ_FUNCTION,$/;"	e	enum:__anon12
+OBJ_STRING	include/object.h	/^    OBJ_STRING,$/;"	e	enum:__anon12
+OBJ_TYPE	include/object.h	8;"	d
 OBJ_VAL	include/value.h	28;"	d
-OP_ADD	include/chunk/chunk.h	/^    OP_ADD,$/;"	e	enum:__anon9
-OP_CONSTANT	include/chunk/chunk.h	/^    OP_CONSTANT,$/;"	e	enum:__anon9
-OP_DEFINE_GLOBAL	include/chunk/chunk.h	/^    OP_DEFINE_GLOBAL,$/;"	e	enum:__anon9
-OP_DIVIDE	include/chunk/chunk.h	/^    OP_DIVIDE,$/;"	e	enum:__anon9
-OP_EQUAL	include/chunk/chunk.h	/^    OP_EQUAL,$/;"	e	enum:__anon9
-OP_FALSE	include/chunk/chunk.h	/^    OP_FALSE,$/;"	e	enum:__anon9
-OP_GET_GLOBAL	include/chunk/chunk.h	/^    OP_GET_GLOBAL,$/;"	e	enum:__anon9
-OP_GET_LOCAL	include/chunk/chunk.h	/^    OP_GET_LOCAL,$/;"	e	enum:__anon9
-OP_GREATER	include/chunk/chunk.h	/^    OP_GREATER,$/;"	e	enum:__anon9
-OP_JUMP	include/chunk/chunk.h	/^    OP_JUMP,$/;"	e	enum:__anon9
-OP_JUMP_IF_FALSE	include/chunk/chunk.h	/^    OP_JUMP_IF_FALSE,$/;"	e	enum:__anon9
-OP_LESS	include/chunk/chunk.h	/^    OP_LESS,$/;"	e	enum:__anon9
-OP_LOOP	include/chunk/chunk.h	/^    OP_LOOP,$/;"	e	enum:__anon9
-OP_MULTIPLY	include/chunk/chunk.h	/^    OP_MULTIPLY,$/;"	e	enum:__anon9
-OP_NEGATE	include/chunk/chunk.h	/^    OP_NEGATE,$/;"	e	enum:__anon9
-OP_NIL	include/chunk/chunk.h	/^    OP_NIL,$/;"	e	enum:__anon9
-OP_NOT	include/chunk/chunk.h	/^    OP_NOT,$/;"	e	enum:__anon9
-OP_POP	include/chunk/chunk.h	/^    OP_POP,$/;"	e	enum:__anon9
-OP_PRINT	include/chunk/chunk.h	/^    OP_PRINT,$/;"	e	enum:__anon9
-OP_RETURN	include/chunk/chunk.h	/^    OP_RETURN,$/;"	e	enum:__anon9
-OP_SET_GLOBAL	include/chunk/chunk.h	/^    OP_SET_GLOBAL,$/;"	e	enum:__anon9
-OP_SET_LOCAL	include/chunk/chunk.h	/^    OP_SET_LOCAL,$/;"	e	enum:__anon9
-OP_SUBTRACT	include/chunk/chunk.h	/^    OP_SUBTRACT,$/;"	e	enum:__anon9
-OP_TRUE	include/chunk/chunk.h	/^    OP_TRUE,$/;"	e	enum:__anon9
+OP_ADD	include/chunk/chunk.h	/^    OP_ADD,$/;"	e	enum:__anon10
+OP_CONSTANT	include/chunk/chunk.h	/^    OP_CONSTANT,$/;"	e	enum:__anon10
+OP_DEFINE_GLOBAL	include/chunk/chunk.h	/^    OP_DEFINE_GLOBAL,$/;"	e	enum:__anon10
+OP_DIVIDE	include/chunk/chunk.h	/^    OP_DIVIDE,$/;"	e	enum:__anon10
+OP_EQUAL	include/chunk/chunk.h	/^    OP_EQUAL,$/;"	e	enum:__anon10
+OP_FALSE	include/chunk/chunk.h	/^    OP_FALSE,$/;"	e	enum:__anon10
+OP_GET_GLOBAL	include/chunk/chunk.h	/^    OP_GET_GLOBAL,$/;"	e	enum:__anon10
+OP_GET_LOCAL	include/chunk/chunk.h	/^    OP_GET_LOCAL,$/;"	e	enum:__anon10
+OP_GREATER	include/chunk/chunk.h	/^    OP_GREATER,$/;"	e	enum:__anon10
+OP_JUMP	include/chunk/chunk.h	/^    OP_JUMP,$/;"	e	enum:__anon10
+OP_JUMP_IF_FALSE	include/chunk/chunk.h	/^    OP_JUMP_IF_FALSE,$/;"	e	enum:__anon10
+OP_LESS	include/chunk/chunk.h	/^    OP_LESS,$/;"	e	enum:__anon10
+OP_LOOP	include/chunk/chunk.h	/^    OP_LOOP,$/;"	e	enum:__anon10
+OP_MULTIPLY	include/chunk/chunk.h	/^    OP_MULTIPLY,$/;"	e	enum:__anon10
+OP_NEGATE	include/chunk/chunk.h	/^    OP_NEGATE,$/;"	e	enum:__anon10
+OP_NIL	include/chunk/chunk.h	/^    OP_NIL,$/;"	e	enum:__anon10
+OP_NOT	include/chunk/chunk.h	/^    OP_NOT,$/;"	e	enum:__anon10
+OP_POP	include/chunk/chunk.h	/^    OP_POP,$/;"	e	enum:__anon10
+OP_PRINT	include/chunk/chunk.h	/^    OP_PRINT,$/;"	e	enum:__anon10
+OP_RETURN	include/chunk/chunk.h	/^    OP_RETURN,$/;"	e	enum:__anon10
+OP_SET_GLOBAL	include/chunk/chunk.h	/^    OP_SET_GLOBAL,$/;"	e	enum:__anon10
+OP_SET_LOCAL	include/chunk/chunk.h	/^    OP_SET_LOCAL,$/;"	e	enum:__anon10
+OP_SUBTRACT	include/chunk/chunk.h	/^    OP_SUBTRACT,$/;"	e	enum:__anon10
+OP_TRUE	include/chunk/chunk.h	/^    OP_TRUE,$/;"	e	enum:__anon10
 Obj	include/object.h	/^struct Obj {$/;"	s
 Obj	include/value.h	/^typedef struct Obj Obj;$/;"	t	typeref:struct:Obj
+ObjFunction	include/object.h	/^} ObjFunction;$/;"	t	typeref:struct:__anon13
 ObjString	include/object.h	/^struct ObjString {$/;"	s
 ObjString	include/value.h	/^typedef struct ObjString ObjString;$/;"	t	typeref:struct:ObjString
-ObjType	include/object.h	/^} ObjType;$/;"	t	typeref:enum:__anon11
-OpCode	include/chunk/chunk.h	/^} OpCode;$/;"	t	typeref:enum:__anon9
+ObjType	include/object.h	/^} ObjType;$/;"	t	typeref:enum:__anon12
+OpCode	include/chunk/chunk.h	/^} OpCode;$/;"	t	typeref:enum:__anon10
 PLATFORM_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	339;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	342;"	d	file:
 PLATFORM_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	345;"	d	file:
@@ -296,14 +301,14 @@ ParseFn	src/compiler/compiler.c	/^typedef void (*ParseFn)(bool canAssign);$/;"	t
 ParseRule	src/compiler/compiler.c	/^} ParseRule;$/;"	t	typeref:struct:__anon4	file:
 Parser	src/compiler/compiler.c	/^} Parser;$/;"	t	typeref:struct:__anon2	file:
 Precedence	src/compiler/compiler.c	/^} Precedence;$/;"	t	typeref:enum:__anon3	file:
-READ_BYTE	src/vm/vm.c	180;"	d	file:
+READ_BYTE	src/vm/vm.c	181;"	d	file:
 READ_BYTE	src/vm/vm.c	51;"	d	file:
-READ_CONSTANT	src/vm/vm.c	183;"	d	file:
+READ_CONSTANT	src/vm/vm.c	184;"	d	file:
 READ_CONSTANT	src/vm/vm.c	52;"	d	file:
-READ_SHORT	src/vm/vm.c	182;"	d	file:
+READ_SHORT	src/vm/vm.c	183;"	d	file:
 READ_SHORT	src/vm/vm.c	53;"	d	file:
-READ_STRING	src/vm/vm.c	181;"	d	file:
-READ_STRING	src/vm/vm.c	54;"	d	file:
+READ_STRING	src/vm/vm.c	182;"	d	file:
+READ_STRING	src/vm/vm.c	55;"	d	file:
 RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	209;"	d	file:
@@ -326,58 +331,60 @@ STRINGIFY_HELPER	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	334;"	d	
 SUFFIXES	build/Makefile	/^SUFFIXES =$/;"	m
 Scanner	src/scanner/scanner.c	/^} Scanner;$/;"	t	typeref:struct:__anon1	file:
 TABLE_MAX_LOAD	src/hash/hashtable.c	8;"	d	file:
-TOKEN_AND	include/scanner/scanner.h	/^    TOKEN_AND, TOKEN_CLASS, TOKEN_ELSE, TOKEN_FALSE,$/;"	e	enum:__anon7
-TOKEN_BANG	include/scanner/scanner.h	/^    TOKEN_BANG, TOKEN_BANG_EQUAL,$/;"	e	enum:__anon7
-TOKEN_BANG_EQUAL	include/scanner/scanner.h	/^    TOKEN_BANG, TOKEN_BANG_EQUAL,$/;"	e	enum:__anon7
-TOKEN_CLASS	include/scanner/scanner.h	/^    TOKEN_AND, TOKEN_CLASS, TOKEN_ELSE, TOKEN_FALSE,$/;"	e	enum:__anon7
-TOKEN_COMMA	include/scanner/scanner.h	/^    TOKEN_COMMA, TOKEN_DOT, TOKEN_MINUS, TOKEN_PLUS,$/;"	e	enum:__anon7
-TOKEN_DOT	include/scanner/scanner.h	/^    TOKEN_COMMA, TOKEN_DOT, TOKEN_MINUS, TOKEN_PLUS,$/;"	e	enum:__anon7
-TOKEN_ELSE	include/scanner/scanner.h	/^    TOKEN_AND, TOKEN_CLASS, TOKEN_ELSE, TOKEN_FALSE,$/;"	e	enum:__anon7
-TOKEN_EOF	include/scanner/scanner.h	/^    TOKEN_ERROR, TOKEN_EOF$/;"	e	enum:__anon7
-TOKEN_EQUAL	include/scanner/scanner.h	/^    TOKEN_EQUAL, TOKEN_EQUAL_EQUAL,$/;"	e	enum:__anon7
-TOKEN_EQUAL_EQUAL	include/scanner/scanner.h	/^    TOKEN_EQUAL, TOKEN_EQUAL_EQUAL,$/;"	e	enum:__anon7
-TOKEN_ERROR	include/scanner/scanner.h	/^    TOKEN_ERROR, TOKEN_EOF$/;"	e	enum:__anon7
-TOKEN_FALSE	include/scanner/scanner.h	/^    TOKEN_AND, TOKEN_CLASS, TOKEN_ELSE, TOKEN_FALSE,$/;"	e	enum:__anon7
-TOKEN_FOR	include/scanner/scanner.h	/^    TOKEN_FOR, TOKEN_FUN, TOKEN_IF, TOKEN_NIL, TOKEN_OR,$/;"	e	enum:__anon7
-TOKEN_FUN	include/scanner/scanner.h	/^    TOKEN_FOR, TOKEN_FUN, TOKEN_IF, TOKEN_NIL, TOKEN_OR,$/;"	e	enum:__anon7
-TOKEN_GREATER	include/scanner/scanner.h	/^    TOKEN_GREATER, TOKEN_GREATER_EQUAL,$/;"	e	enum:__anon7
-TOKEN_GREATER_EQUAL	include/scanner/scanner.h	/^    TOKEN_GREATER, TOKEN_GREATER_EQUAL,$/;"	e	enum:__anon7
-TOKEN_IDENTIFIER	include/scanner/scanner.h	/^    TOKEN_IDENTIFIER, TOKEN_STRING, TOKEN_NUMBER,$/;"	e	enum:__anon7
-TOKEN_IF	include/scanner/scanner.h	/^    TOKEN_FOR, TOKEN_FUN, TOKEN_IF, TOKEN_NIL, TOKEN_OR,$/;"	e	enum:__anon7
-TOKEN_LEFT_BRACE	include/scanner/scanner.h	/^    TOKEN_LEFT_BRACE, TOKEN_RIGHT_BRACE,$/;"	e	enum:__anon7
-TOKEN_LEFT_PAREN	include/scanner/scanner.h	/^    TOKEN_LEFT_PAREN, TOKEN_RIGHT_PAREN,$/;"	e	enum:__anon7
-TOKEN_LESS	include/scanner/scanner.h	/^    TOKEN_LESS, TOKEN_LESS_EQUAL,$/;"	e	enum:__anon7
-TOKEN_LESS_EQUAL	include/scanner/scanner.h	/^    TOKEN_LESS, TOKEN_LESS_EQUAL,$/;"	e	enum:__anon7
-TOKEN_MINUS	include/scanner/scanner.h	/^    TOKEN_COMMA, TOKEN_DOT, TOKEN_MINUS, TOKEN_PLUS,$/;"	e	enum:__anon7
-TOKEN_NIL	include/scanner/scanner.h	/^    TOKEN_FOR, TOKEN_FUN, TOKEN_IF, TOKEN_NIL, TOKEN_OR,$/;"	e	enum:__anon7
-TOKEN_NUMBER	include/scanner/scanner.h	/^    TOKEN_IDENTIFIER, TOKEN_STRING, TOKEN_NUMBER,$/;"	e	enum:__anon7
-TOKEN_OR	include/scanner/scanner.h	/^    TOKEN_FOR, TOKEN_FUN, TOKEN_IF, TOKEN_NIL, TOKEN_OR,$/;"	e	enum:__anon7
-TOKEN_PLUS	include/scanner/scanner.h	/^    TOKEN_COMMA, TOKEN_DOT, TOKEN_MINUS, TOKEN_PLUS,$/;"	e	enum:__anon7
-TOKEN_PRINT	include/scanner/scanner.h	/^    TOKEN_PRINT, TOKEN_RETURN, TOKEN_SUPER, TOKEN_THIS,$/;"	e	enum:__anon7
-TOKEN_RETURN	include/scanner/scanner.h	/^    TOKEN_PRINT, TOKEN_RETURN, TOKEN_SUPER, TOKEN_THIS,$/;"	e	enum:__anon7
-TOKEN_RIGHT_BRACE	include/scanner/scanner.h	/^    TOKEN_LEFT_BRACE, TOKEN_RIGHT_BRACE,$/;"	e	enum:__anon7
-TOKEN_RIGHT_PAREN	include/scanner/scanner.h	/^    TOKEN_LEFT_PAREN, TOKEN_RIGHT_PAREN,$/;"	e	enum:__anon7
-TOKEN_SEMICOLON	include/scanner/scanner.h	/^    TOKEN_SEMICOLON, TOKEN_SLASH, TOKEN_STAR,$/;"	e	enum:__anon7
-TOKEN_SLASH	include/scanner/scanner.h	/^    TOKEN_SEMICOLON, TOKEN_SLASH, TOKEN_STAR,$/;"	e	enum:__anon7
-TOKEN_STAR	include/scanner/scanner.h	/^    TOKEN_SEMICOLON, TOKEN_SLASH, TOKEN_STAR,$/;"	e	enum:__anon7
-TOKEN_STRING	include/scanner/scanner.h	/^    TOKEN_IDENTIFIER, TOKEN_STRING, TOKEN_NUMBER,$/;"	e	enum:__anon7
-TOKEN_SUPER	include/scanner/scanner.h	/^    TOKEN_PRINT, TOKEN_RETURN, TOKEN_SUPER, TOKEN_THIS,$/;"	e	enum:__anon7
-TOKEN_THIS	include/scanner/scanner.h	/^    TOKEN_PRINT, TOKEN_RETURN, TOKEN_SUPER, TOKEN_THIS,$/;"	e	enum:__anon7
-TOKEN_TRUE	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;"	e	enum:__anon7
-TOKEN_VAR	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;"	e	enum:__anon7
-TOKEN_WHILE	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;"	e	enum:__anon7
-Table	include/hash/hashtable.h	/^} Table;$/;"	t	typeref:struct:__anon19
-Token	include/scanner/scanner.h	/^} Token;$/;"	t	typeref:struct:__anon8
-TokenType	include/scanner/scanner.h	/^} TokenType;$/;"	t	typeref:enum:__anon7
+TOKEN_AND	include/scanner/scanner.h	/^    TOKEN_AND, TOKEN_CLASS, TOKEN_ELSE, TOKEN_FALSE,$/;"	e	enum:__anon8
+TOKEN_BANG	include/scanner/scanner.h	/^    TOKEN_BANG, TOKEN_BANG_EQUAL,$/;"	e	enum:__anon8
+TOKEN_BANG_EQUAL	include/scanner/scanner.h	/^    TOKEN_BANG, TOKEN_BANG_EQUAL,$/;"	e	enum:__anon8
+TOKEN_CLASS	include/scanner/scanner.h	/^    TOKEN_AND, TOKEN_CLASS, TOKEN_ELSE, TOKEN_FALSE,$/;"	e	enum:__anon8
+TOKEN_COMMA	include/scanner/scanner.h	/^    TOKEN_COMMA, TOKEN_DOT, TOKEN_MINUS, TOKEN_PLUS,$/;"	e	enum:__anon8
+TOKEN_DOT	include/scanner/scanner.h	/^    TOKEN_COMMA, TOKEN_DOT, TOKEN_MINUS, TOKEN_PLUS,$/;"	e	enum:__anon8
+TOKEN_ELSE	include/scanner/scanner.h	/^    TOKEN_AND, TOKEN_CLASS, TOKEN_ELSE, TOKEN_FALSE,$/;"	e	enum:__anon8
+TOKEN_EOF	include/scanner/scanner.h	/^    TOKEN_ERROR, TOKEN_EOF$/;"	e	enum:__anon8
+TOKEN_EQUAL	include/scanner/scanner.h	/^    TOKEN_EQUAL, TOKEN_EQUAL_EQUAL,$/;"	e	enum:__anon8
+TOKEN_EQUAL_EQUAL	include/scanner/scanner.h	/^    TOKEN_EQUAL, TOKEN_EQUAL_EQUAL,$/;"	e	enum:__anon8
+TOKEN_ERROR	include/scanner/scanner.h	/^    TOKEN_ERROR, TOKEN_EOF$/;"	e	enum:__anon8
+TOKEN_FALSE	include/scanner/scanner.h	/^    TOKEN_AND, TOKEN_CLASS, TOKEN_ELSE, TOKEN_FALSE,$/;"	e	enum:__anon8
+TOKEN_FOR	include/scanner/scanner.h	/^    TOKEN_FOR, TOKEN_FUN, TOKEN_IF, TOKEN_NIL, TOKEN_OR,$/;"	e	enum:__anon8
+TOKEN_FUN	include/scanner/scanner.h	/^    TOKEN_FOR, TOKEN_FUN, TOKEN_IF, TOKEN_NIL, TOKEN_OR,$/;"	e	enum:__anon8
+TOKEN_GREATER	include/scanner/scanner.h	/^    TOKEN_GREATER, TOKEN_GREATER_EQUAL,$/;"	e	enum:__anon8
+TOKEN_GREATER_EQUAL	include/scanner/scanner.h	/^    TOKEN_GREATER, TOKEN_GREATER_EQUAL,$/;"	e	enum:__anon8
+TOKEN_IDENTIFIER	include/scanner/scanner.h	/^    TOKEN_IDENTIFIER, TOKEN_STRING, TOKEN_NUMBER,$/;"	e	enum:__anon8
+TOKEN_IF	include/scanner/scanner.h	/^    TOKEN_FOR, TOKEN_FUN, TOKEN_IF, TOKEN_NIL, TOKEN_OR,$/;"	e	enum:__anon8
+TOKEN_LEFT_BRACE	include/scanner/scanner.h	/^    TOKEN_LEFT_BRACE, TOKEN_RIGHT_BRACE,$/;"	e	enum:__anon8
+TOKEN_LEFT_PAREN	include/scanner/scanner.h	/^    TOKEN_LEFT_PAREN, TOKEN_RIGHT_PAREN,$/;"	e	enum:__anon8
+TOKEN_LESS	include/scanner/scanner.h	/^    TOKEN_LESS, TOKEN_LESS_EQUAL,$/;"	e	enum:__anon8
+TOKEN_LESS_EQUAL	include/scanner/scanner.h	/^    TOKEN_LESS, TOKEN_LESS_EQUAL,$/;"	e	enum:__anon8
+TOKEN_MINUS	include/scanner/scanner.h	/^    TOKEN_COMMA, TOKEN_DOT, TOKEN_MINUS, TOKEN_PLUS,$/;"	e	enum:__anon8
+TOKEN_NIL	include/scanner/scanner.h	/^    TOKEN_FOR, TOKEN_FUN, TOKEN_IF, TOKEN_NIL, TOKEN_OR,$/;"	e	enum:__anon8
+TOKEN_NUMBER	include/scanner/scanner.h	/^    TOKEN_IDENTIFIER, TOKEN_STRING, TOKEN_NUMBER,$/;"	e	enum:__anon8
+TOKEN_OR	include/scanner/scanner.h	/^    TOKEN_FOR, TOKEN_FUN, TOKEN_IF, TOKEN_NIL, TOKEN_OR,$/;"	e	enum:__anon8
+TOKEN_PLUS	include/scanner/scanner.h	/^    TOKEN_COMMA, TOKEN_DOT, TOKEN_MINUS, TOKEN_PLUS,$/;"	e	enum:__anon8
+TOKEN_PRINT	include/scanner/scanner.h	/^    TOKEN_PRINT, TOKEN_RETURN, TOKEN_SUPER, TOKEN_THIS,$/;"	e	enum:__anon8
+TOKEN_RETURN	include/scanner/scanner.h	/^    TOKEN_PRINT, TOKEN_RETURN, TOKEN_SUPER, TOKEN_THIS,$/;"	e	enum:__anon8
+TOKEN_RIGHT_BRACE	include/scanner/scanner.h	/^    TOKEN_LEFT_BRACE, TOKEN_RIGHT_BRACE,$/;"	e	enum:__anon8
+TOKEN_RIGHT_PAREN	include/scanner/scanner.h	/^    TOKEN_LEFT_PAREN, TOKEN_RIGHT_PAREN,$/;"	e	enum:__anon8
+TOKEN_SEMICOLON	include/scanner/scanner.h	/^    TOKEN_SEMICOLON, TOKEN_SLASH, TOKEN_STAR,$/;"	e	enum:__anon8
+TOKEN_SLASH	include/scanner/scanner.h	/^    TOKEN_SEMICOLON, TOKEN_SLASH, TOKEN_STAR,$/;"	e	enum:__anon8
+TOKEN_STAR	include/scanner/scanner.h	/^    TOKEN_SEMICOLON, TOKEN_SLASH, TOKEN_STAR,$/;"	e	enum:__anon8
+TOKEN_STRING	include/scanner/scanner.h	/^    TOKEN_IDENTIFIER, TOKEN_STRING, TOKEN_NUMBER,$/;"	e	enum:__anon8
+TOKEN_SUPER	include/scanner/scanner.h	/^    TOKEN_PRINT, TOKEN_RETURN, TOKEN_SUPER, TOKEN_THIS,$/;"	e	enum:__anon8
+TOKEN_THIS	include/scanner/scanner.h	/^    TOKEN_PRINT, TOKEN_RETURN, TOKEN_SUPER, TOKEN_THIS,$/;"	e	enum:__anon8
+TOKEN_TRUE	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;"	e	enum:__anon8
+TOKEN_VAR	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;"	e	enum:__anon8
+TOKEN_WHILE	include/scanner/scanner.h	/^    TOKEN_TRUE, TOKEN_VAR, TOKEN_WHILE,$/;"	e	enum:__anon8
+TYPE_FUNCTION	src/compiler/compiler.c	/^    TYPE_FUNCTION,$/;"	e	enum:__anon6	file:
+TYPE_SCRIPT	src/compiler/compiler.c	/^    TYPE_SCRIPT,$/;"	e	enum:__anon6	file:
+Table	include/hash/hashtable.h	/^} Table;$/;"	t	typeref:struct:__anon21
+Token	include/scanner/scanner.h	/^} Token;$/;"	t	typeref:struct:__anon9
+TokenType	include/scanner/scanner.h	/^} TokenType;$/;"	t	typeref:enum:__anon8
 UINT8_COUNT	include/common.h	13;"	d
-VAL_BOOL	include/value.h	/^    VAL_BOOL,$/;"	e	enum:__anon12
-VAL_NIL	include/value.h	/^    VAL_NIL,$/;"	e	enum:__anon12
-VAL_NUMBER	include/value.h	/^    VAL_NUMBER,$/;"	e	enum:__anon12
-VAL_OBJ	include/value.h	/^    VAL_OBJ$/;"	e	enum:__anon12
-VM	include/vm/vm.h	/^} VM;$/;"	t	typeref:struct:__anon16
-Value	include/value.h	/^} Value;$/;"	t	typeref:struct:__anon13
-ValueArray	include/value.h	/^} ValueArray;$/;"	t	typeref:struct:__anon15
-ValueType	include/value.h	/^} ValueType;$/;"	t	typeref:enum:__anon12
+VAL_BOOL	include/value.h	/^    VAL_BOOL,$/;"	e	enum:__anon14
+VAL_NIL	include/value.h	/^    VAL_NIL,$/;"	e	enum:__anon14
+VAL_NUMBER	include/value.h	/^    VAL_NUMBER,$/;"	e	enum:__anon14
+VAL_OBJ	include/value.h	/^    VAL_OBJ$/;"	e	enum:__anon14
+VM	include/vm/vm.h	/^} VM;$/;"	t	typeref:struct:__anon18
+Value	include/value.h	/^} Value;$/;"	t	typeref:struct:__anon15
+ValueArray	include/value.h	/^} ValueArray;$/;"	t	typeref:struct:__anon17
+ValueType	include/value.h	/^} ValueType;$/;"	t	typeref:enum:__anon14
 addConstant	src/chunk/chunk.c	/^int addConstant(Chunk* chunk, Value value) {$/;"	f
 addLocal	src/compiler/compiler.c	/^static void addLocal(Token name) {$/;"	f	file:
 adjustCapacity	src/hash/hashtable.c	/^static void adjustCapacity(Table* table, int capacity) {$/;"	f	file:
@@ -386,31 +393,32 @@ advance	src/scanner/scanner.c	/^static char advance() {$/;"	f	file:
 allocateObject	src/object.c	/^static Obj* allocateObject(size_t size, ObjType type) {$/;"	f	file:
 allocateString	src/object.c	/^static ObjString* allocateString(char* chars, int length, uint32_t hash) {$/;"	f	file:
 and_	src/compiler/compiler.c	/^static void and_(bool canAssign) {$/;"	f	file:
-as	include/value.h	/^    } as;$/;"	m	struct:__anon13	typeref:union:__anon13::__anon14
+arity	include/object.h	/^    int arity;$/;"	m	struct:__anon13
+as	include/value.h	/^    } as;$/;"	m	struct:__anon15	typeref:union:__anon15::__anon16
 beginScope	src/compiler/compiler.c	/^static void beginScope() {$/;"	f	file:
 binary	src/compiler/compiler.c	/^static void binary(bool canAssign) {$/;"	f	file:
 block	src/compiler/compiler.c	/^static void block() {$/;"	f	file:
-boolean	include/value.h	/^        bool boolean;$/;"	m	union:__anon13::__anon14
+boolean	include/value.h	/^        bool boolean;$/;"	m	union:__anon15::__anon16
 byteInstruction	src/debug/debug.c	/^static int byteInstruction(const char* name, Chunk* chunk, int offset) {$/;"	f	file:
-capacity	include/chunk/chunk.h	/^    int capacity;$/;"	m	struct:__anon10
-capacity	include/hash/hashtable.h	/^    int capacity;$/;"	m	struct:__anon19
-capacity	include/value.h	/^    int capacity;$/;"	m	struct:__anon15
+capacity	include/chunk/chunk.h	/^    int capacity;$/;"	m	struct:__anon11
+capacity	include/hash/hashtable.h	/^    int capacity;$/;"	m	struct:__anon21
+capacity	include/value.h	/^    int capacity;$/;"	m	struct:__anon17
 chars	include/object.h	/^    char* chars;$/;"	m	struct:ObjString
 check	src/compiler/compiler.c	/^static bool check(TokenType type) {$/;"	f	file:
 checkKeyword	src/scanner/scanner.c	/^static TokenType checkKeyword(int start, int length, const char* rest, TokenType type) {$/;"	f	file:
-chunk	include/vm/vm.h	/^    Chunk* chunk;$/;"	m	struct:__anon16
-code	include/chunk/chunk.h	/^    uint8_t* code;$/;"	m	struct:__anon10
+chunk	include/object.h	/^    Chunk chunk;$/;"	m	struct:__anon13
+chunk	include/vm/vm.h	/^    Chunk* chunk;$/;"	m	struct:__anon18
+code	include/chunk/chunk.h	/^    uint8_t* code;$/;"	m	struct:__anon11
 compile	src/compiler/compiler.c	/^bool compile(const char* source, Chunk* chunk) {$/;"	f
-compilingChunk	src/compiler/compiler.c	/^Chunk* compilingChunk;$/;"	v
 concatenate	src/vm/vm.c	/^static void concatenate() {$/;"	f	file:
 const	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
 constantInstruction	src/debug/debug.c	/^static int constantInstruction(const char* name, Chunk* chunk, int offset) {$/;"	f	file:
-constants	include/chunk/chunk.h	/^    ValueArray constants;$/;"	m	struct:__anon10
+constants	include/chunk/chunk.h	/^    ValueArray constants;$/;"	m	struct:__anon11
 consume	src/compiler/compiler.c	/^static void consume(TokenType type, const char* message) {$/;"	f	file:
 copyString	src/object.c	/^ObjString* copyString(const char* chars, int length) {$/;"	f
-count	include/chunk/chunk.h	/^    int count;$/;"	m	struct:__anon10
-count	include/hash/hashtable.h	/^    int count;$/;"	m	struct:__anon19
-count	include/value.h	/^    int count;$/;"	m	struct:__anon15
+count	include/chunk/chunk.h	/^    int count;$/;"	m	struct:__anon11
+count	include/hash/hashtable.h	/^    int count;$/;"	m	struct:__anon21
+count	include/value.h	/^    int count;$/;"	m	struct:__anon17
 current	src/compiler/compiler.c	/^    Token current;$/;"	m	struct:__anon2	file:
 current	src/compiler/compiler.c	/^Compiler* current = NULL;$/;"	v
 current	src/scanner/scanner.c	/^    const char* current;$/;"	m	struct:__anon1	file:
@@ -427,9 +435,9 @@ emitConstant	src/compiler/compiler.c	/^static void emitConstant(Value value) {$/
 emitJump	src/compiler/compiler.c	/^static int emitJump(uint8_t instruction) {$/;"	f	file:
 emitLoop	src/compiler/compiler.c	/^static void emitLoop(int loopStart) {$/;"	f	file:
 emitReturn	src/compiler/compiler.c	/^static void emitReturn() { emitByte(OP_RETURN); }$/;"	f	file:
-endCompiler	src/compiler/compiler.c	/^static void endCompiler() { $/;"	f	file:
+endCompiler	src/compiler/compiler.c	/^static ObjFunction* endCompiler() { $/;"	f	file:
 endScope	src/compiler/compiler.c	/^static void endScope() {$/;"	f	file:
-entries	include/hash/hashtable.h	/^    Entry* entries;$/;"	m	struct:__anon19
+entries	include/hash/hashtable.h	/^    Entry* entries;$/;"	m	struct:__anon21
 error	src/compiler/compiler.c	/^static void error(const char* message) {$/;"	f	file:
 errorAt	src/compiler/compiler.c	/^static void errorAt(Token* token, const char* message) {$/;"	f	file:
 errorAtCurrent	src/compiler/compiler.c	/^static void errorAtCurrent(const char* message) {$/;"	f	file:
@@ -444,8 +452,9 @@ freeObjects	src/memory.c	/^void freeObjects() {$/;"	f
 freeTable	src/hash/hashtable.c	/^void freeTable(Table* table) {$/;"	f
 freeVM	src/vm/vm.c	/^void freeVM() {$/;"	f
 freeValueArray	src/value.c	/^void freeValueArray(ValueArray* array) {$/;"	f
+function	src/compiler/compiler.c	/^    ObjFunction* function;$/;"	m	struct:__anon7	file:
 getRule	src/compiler/compiler.c	/^static ParseRule* getRule(TokenType type) {$/;"	f	file:
-globals	include/vm/vm.h	/^    Table globals;$/;"	m	struct:__anon16
+globals	include/vm/vm.h	/^    Table globals;$/;"	m	struct:__anon18
 grouping	src/compiler/compiler.c	/^static void grouping(bool canAssign) {$/;"	f	file:
 hadError	src/compiler/compiler.c	/^    bool hadError;$/;"	m	struct:__anon2	file:
 hash	include/object.h	/^    uint32_t hash;$/;"	m	struct:ObjString
@@ -466,28 +475,28 @@ info_simulate_version	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^c
 info_version	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v
 info_version_internal	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v
 initChunk	src/chunk/chunk.c	/^void initChunk(Chunk* chunk) {$/;"	f
-initCompiler	src/compiler/compiler.c	/^static void initCompiler(Compiler* compiler) {$/;"	f	file:
+initCompiler	src/compiler/compiler.c	/^static void initCompiler(Compiler* compiler, FunctionType type) {$/;"	f	file:
 initScanner	src/scanner/scanner.c	/^void initScanner(const char* source) {$/;"	f
 initTable	src/hash/hashtable.c	/^void initTable(Table* table) {$/;"	f
 initVM	src/vm/vm.c	/^void initVM() {$/;"	f
 initValueArray	src/value.c	/^void initValueArray(ValueArray* array) {$/;"	f
 interpret	src/vm/vm.c	/^InterpretResult interpret(const char* source) {$/;"	f
-ip	include/vm/vm.h	/^    uint8_t* ip;$/;"	m	struct:__anon16
+ip	include/vm/vm.h	/^    uint8_t* ip;$/;"	m	struct:__anon18
 isAlpha	src/scanner/scanner.c	/^static bool isAlpha(char c) {$/;"	f	file:
 isAtEnd	src/scanner/scanner.c	/^static bool isAtEnd() {$/;"	f	file:
 isDigit	src/scanner/scanner.c	/^static bool isDigit(char c) {$/;"	f	file:
 isFalsey	src/vm/vm.c	/^static bool isFalsey(Value value) {$/;"	f	file:
 isObjType	include/object.h	/^static inline bool isObjType(Value value, ObjType type) {$/;"	f
 jumpInstruction	src/debug/debug.c	/^static int jumpInstruction(const char* name, int sign, Chunk* chunk, int offset) {$/;"	f	file:
-key	include/hash/hashtable.h	/^    ObjString* key;$/;"	m	struct:__anon18
+key	include/hash/hashtable.h	/^    ObjString* key;$/;"	m	struct:__anon20
 length	include/object.h	/^    int length;$/;"	m	struct:ObjString
-length	include/scanner/scanner.h	/^    int length;$/;"	m	struct:__anon8
-line	include/scanner/scanner.h	/^    int line;$/;"	m	struct:__anon8
+length	include/scanner/scanner.h	/^    int length;$/;"	m	struct:__anon9
+line	include/scanner/scanner.h	/^    int line;$/;"	m	struct:__anon9
 line	src/scanner/scanner.c	/^    int line;$/;"	m	struct:__anon1	file:
-lines	include/chunk/chunk.h	/^    int* lines;$/;"	m	struct:__anon10
+lines	include/chunk/chunk.h	/^    int* lines;$/;"	m	struct:__anon11
 literal	src/compiler/compiler.c	/^static void literal(bool canAssign) {$/;"	f	file:
-localCount	src/compiler/compiler.c	/^    int localCount;$/;"	m	struct:__anon6	file:
-locals	src/compiler/compiler.c	/^    Local locals[UINT8_COUNT];$/;"	m	struct:__anon6	file:
+localCount	src/compiler/compiler.c	/^    int localCount;$/;"	m	struct:__anon7	file:
+locals	src/compiler/compiler.c	/^    Local locals[UINT8_COUNT];$/;"	m	struct:__anon7	file:
 main	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^int main(argc, argv) int argc; char *argv[];$/;"	f
 main	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	src/main.c	/^int main(int argc, const char* argv[]) {$/;"	f
@@ -496,15 +505,18 @@ makeToken	src/scanner/scanner.c	/^static Token makeToken(TokenType type) {$/;"	f
 markInitialized	src/compiler/compiler.c	/^static void markInitialized() {$/;"	f	file:
 match	src/compiler/compiler.c	/^static bool match(TokenType type) {$/;"	f	file:
 match	src/scanner/scanner.c	/^static bool match(char expected) {$/;"	f	file:
+name	include/object.h	/^    ObjString* name;$/;"	m	struct:__anon13
 name	src/compiler/compiler.c	/^    Token name;$/;"	m	struct:__anon5	file:
 namedVariable	src/compiler/compiler.c	/^static void namedVariable(Token name, bool canAssign) {$/;"	f	file:
+newFunction	src/object.c	/^ObjFunction* newFunction() {$/;"	f
 next	include/object.h	/^    struct Obj* next;$/;"	m	struct:Obj	typeref:struct:Obj::Obj
-number	include/value.h	/^        double number;$/;"	m	union:__anon13::__anon14
+number	include/value.h	/^        double number;$/;"	m	union:__anon15::__anon16
 number	src/compiler/compiler.c	/^static void number(bool canAssign) {$/;"	f	file:
 number	src/scanner/scanner.c	/^static Token number() {$/;"	f	file:
 obj	include/object.h	/^    Obj obj;$/;"	m	struct:ObjString
-obj	include/value.h	/^        Obj* obj;$/;"	m	union:__anon13::__anon14
-objects	include/vm/vm.h	/^    Obj* objects;$/;"	m	struct:__anon16
+obj	include/object.h	/^    Obj obj;$/;"	m	struct:__anon13
+obj	include/value.h	/^        Obj* obj;$/;"	m	union:__anon15::__anon16
+objects	include/vm/vm.h	/^    Obj* objects;$/;"	m	struct:__anon18
 or_	src/compiler/compiler.c	/^static void or_(bool canAssign) {$/;"	f	file:
 panicMode	src/compiler/compiler.c	/^    bool panicMode;$/;"	m	struct:__anon2	file:
 parsePrecedence	src/compiler/compiler.c	/^static void parsePrecedence(Precedence precedence) {$/;"	f	file:
@@ -518,6 +530,7 @@ pop	src/vm/vm.c	/^Value pop() {$/;"	f
 precedence	src/compiler/compiler.c	/^    Precedence precedence;$/;"	m	struct:__anon4	file:
 prefix	src/compiler/compiler.c	/^    ParseFn prefix;$/;"	m	struct:__anon4	file:
 previous	src/compiler/compiler.c	/^    Token previous;$/;"	m	struct:__anon2	file:
+printFunction	src/object.c	/^static void printFunction(ObjFunction* function) {$/;"	f	file:
 printObject	src/object.c	/^void printObject(Value value) {$/;"	f
 printStatement	src/compiler/compiler.c	/^static void printStatement() {$/;"	f	file:
 printValue	src/value.c	/^void printValue(Value value) {$/;"	f
@@ -535,17 +548,17 @@ runFile	src/main.c	/^static void runFile(const char* path) {$/;"	f	file:
 runtimeError	src/vm/vm.c	/^static void runtimeError(const char* format, ...) {$/;"	f	file:
 scanToken	src/scanner/scanner.c	/^Token scanToken() {$/;"	f
 scanner	src/scanner/scanner.c	/^Scanner scanner;$/;"	v
-scopeDepth	src/compiler/compiler.c	/^    int scopeDepth;$/;"	m	struct:__anon6	file:
+scopeDepth	src/compiler/compiler.c	/^    int scopeDepth;$/;"	m	struct:__anon7	file:
 simpleInstruction	src/debug/debug.c	/^static int simpleInstruction(const char* name, int offset) {$/;"	f	file:
 skipWhitespace	src/scanner/scanner.c	/^static void skipWhitespace() {$/;"	f	file:
-stack	include/vm/vm.h	/^    Value stack[STACK_MAX];$/;"	m	struct:__anon16
-stackTop	include/vm/vm.h	/^    Value* stackTop;$/;"	m	struct:__anon16
-start	include/scanner/scanner.h	/^    const char* start;$/;"	m	struct:__anon8
+stack	include/vm/vm.h	/^    Value stack[STACK_MAX];$/;"	m	struct:__anon18
+stackTop	include/vm/vm.h	/^    Value* stackTop;$/;"	m	struct:__anon18
+start	include/scanner/scanner.h	/^    const char* start;$/;"	m	struct:__anon9
 start	src/scanner/scanner.c	/^    const char* start;$/;"	m	struct:__anon1	file:
 statement	src/compiler/compiler.c	/^static void statement() {$/;"	f	file:
 string	src/compiler/compiler.c	/^static void string(bool canAssign) {$/;"	f	file:
 string	src/scanner/scanner.c	/^static Token string() {$/;"	f	file:
-strings	include/vm/vm.h	/^    Table strings;$/;"	m	struct:__anon16
+strings	include/vm/vm.h	/^    Table strings;$/;"	m	struct:__anon18
 synchronize	src/compiler/compiler.c	/^static void synchronize() {$/;"	f	file:
 tableAddAll	src/hash/hashtable.c	/^void tableAddAll(Table* from, Table* to) {$/;"	f
 tableDelete	src/hash/hashtable.c	/^bool tableDelete(Table* table, ObjString* key) {$/;"	f
@@ -554,11 +567,12 @@ tableGet	src/hash/hashtable.c	/^bool tableGet(Table* table, ObjString* key, Valu
 tableSet	src/hash/hashtable.c	/^bool tableSet(Table* table, ObjString* key, Value value) {$/;"	f
 takeString	src/object.c	/^ObjString* takeString(char* chars, int length) {$/;"	f
 type	include/object.h	/^    ObjType type;$/;"	m	struct:Obj
-type	include/scanner/scanner.h	/^    TokenType type;$/;"	m	struct:__anon8
-type	include/value.h	/^    ValueType type;$/;"	m	struct:__anon13
+type	include/scanner/scanner.h	/^    TokenType type;$/;"	m	struct:__anon9
+type	include/value.h	/^    ValueType type;$/;"	m	struct:__anon15
+type	src/compiler/compiler.c	/^    FunctionType type;$/;"	m	struct:__anon7	file:
 unary	src/compiler/compiler.c	/^static void unary(bool canAssign) {$/;"	f	file:
-value	include/hash/hashtable.h	/^    Value value;$/;"	m	struct:__anon18
-values	include/value.h	/^    Value* values;$/;"	m	struct:__anon15
+value	include/hash/hashtable.h	/^    Value value;$/;"	m	struct:__anon20
+values	include/value.h	/^    Value* values;$/;"	m	struct:__anon17
 valuesEqual	src/value.c	/^bool valuesEqual(Value a, Value b) {$/;"	f
 varDeclaration	src/compiler/compiler.c	/^static void varDeclaration() {$/;"	f	file:
 variable	src/compiler/compiler.c	/^static void variable(bool canAssign) {$/;"	f	file:

@@ -14,6 +14,7 @@ add_library(value
     src/object.c
     include/value.h
     include/object.h
+    include/chunk/chunk.h
 )
 target_link_libraries(value PRIVATE memory)
 
@@ -32,7 +33,6 @@ add_library(chunk
 target_include_directories(chunk PUBLIC include)
 target_link_libraries(chunk PRIVATE memory)
 target_link_libraries(chunk PRIVATE value)
-
 
 add_library(vm
     src/vm/vm.c
