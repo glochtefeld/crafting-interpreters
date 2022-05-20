@@ -209,9 +209,9 @@ static void namedVariable(Token name, bool canAssign) {
     }
     if (canAssign && match(TOKEN_EQUAL)) {
         expression();
-        emitBytes(setOp, arg);
+        emitBytes(setOp, (uint8_t)arg);
     } else {
-        emitBytes(getOp, arg);
+        emitBytes(getOp, (uint8_t)arg);
     }
 }
 
@@ -338,9 +338,10 @@ static void ifStatement() {
     int thenJump = emitJump(OP_JUMP_IF_FALSE);
     emitByte(OP_POP);
     statement();
-    patchJump(thenJump);
 
     int elseJump = emitJump(OP_JUMP);
+    patchJump(thenJump);
+
     if (match(TOKEN_ELSE)) statement();
     patchJump(elseJump);
     emitByte(OP_POP);
@@ -360,14 +361,45 @@ static void whileStatement() {
     emitByte(OP_POP);
 }
 static void forStatement() {
+    beginScope();
     consume(TOKEN_LEFT_PAREN, "Expect '(' after 'for'.");
-    consume(TOKEN_SEMICOLON, "Expect ';'.");
+    if (match(TOKEN_SEMICOLON)) { // No initializer -- do nothing.
+    } else if (match(TOKEN_VAR)) {
+        varDeclaration();
+    } else {
+        expressionStatement();
+    }
 
     int loopStart = currentChunk()->count;
-    consume(TOKEN_SEMICOLON, "Expect ';'.");
-    consume(TOKEN_RIGHT_PAREN, "Expect ')' after for clauses.");
+    int exitJump = -1;
+    if (!match(TOKEN_SEMICOLON)) {
+        expression();
+        consume(TOKEN_SEMICOLON, "Expect ';' after loop condition.");
+        exitJump = emitJump(OP_JUMP_IF_FALSE);
+        emitByte(OP_POP); // condition
+    }
+
+    if (!match(TOKEN_RIGHT_PAREN)) {
+        int bodyJump = emitJump(OP_JUMP);
+        int incrementStart = currentChunk()->count;
+        expression();
+        emitByte(OP_POP);
+        consume(TOKEN_RIGHT_PAREN, "Expect ')' after for clauses.");
+
+        emitLoop(loopStart);
+        loopStart = incrementStart;
+        patchJump(bodyJump);
+    }
+
     statement();
     emitLoop(loopStart);
+
+    if (exitJump != -1) {
+        patchJump(exitJump);
+        emitByte(OP_POP);
+    }
+
+    endScope();
 }
 static void expression() {
     parsePrecedence(PREC_ASSIGNMENT);
@@ -477,7 +509,7 @@ static void patchJump(int offset) {
         error("Too much code to jump over!");
     }
     currentChunk()->code[offset] = (jump >> 8) & 0xff;
-    currentChunk()->code[offset + 1] = (jump >> 8) & 0xff;
+    currentChunk()->code[offset + 1] = jump & 0xff;
 }
 static void emitLoop(int loopStart) {
     emitByte(OP_LOOP);

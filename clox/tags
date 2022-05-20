@@ -41,8 +41,8 @@ AS_CSTRING	include/object.h	10;"	d
 AS_NUMBER	include/value.h	36;"	d
 AS_OBJ	include/value.h	37;"	d
 AS_STRING	include/object.h	9;"	d
-BINARY_OP	src/vm/vm.c	157;"	d	file:
-BINARY_OP	src/vm/vm.c	54;"	d	file:
+BINARY_OP	src/vm/vm.c	184;"	d	file:
+BINARY_OP	src/vm/vm.c	55;"	d	file:
 BOOL_VAL	include/value.h	25;"	d
 CLOX_CHUNK_H	include/chunk/chunk.h	2;"	d
 CLOX_COMMON_H	include/common.h	2;"	d
@@ -54,9 +54,9 @@ CLOX_OBJECT_H	include/object.h	2;"	d
 CLOX_SCANNER_H	include/scanner/scanner.h	2;"	d
 CLOX_VALUE_H	include/value.h	2;"	d
 CLOX_VM_H	include/vm/vm.h	2;"	d
-CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/home\/lochga01\/Projects\/crafting-interpreters\/clox\/build$/;"	m
+CMAKE_BINARY_DIR	build/Makefile	/^CMAKE_BINARY_DIR = \/home\/gll\/Projects\/crafting-interpreters\/clox\/build$/;"	m
 CMAKE_COMMAND	build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
-CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/lochga01\/Projects\/crafting-interpreters\/clox$/;"	m
+CMAKE_SOURCE_DIR	build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/gll\/Projects\/crafting-interpreters\/clox$/;"	m
 COMPILER_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	108;"	d	file:
 COMPILER_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	115;"	d	file:
 COMPILER_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
@@ -228,7 +228,10 @@ OP_FALSE	include/chunk/chunk.h	/^    OP_FALSE,$/;"	e	enum:__anon9
 OP_GET_GLOBAL	include/chunk/chunk.h	/^    OP_GET_GLOBAL,$/;"	e	enum:__anon9
 OP_GET_LOCAL	include/chunk/chunk.h	/^    OP_GET_LOCAL,$/;"	e	enum:__anon9
 OP_GREATER	include/chunk/chunk.h	/^    OP_GREATER,$/;"	e	enum:__anon9
+OP_JUMP	include/chunk/chunk.h	/^    OP_JUMP,$/;"	e	enum:__anon9
+OP_JUMP_IF_FALSE	include/chunk/chunk.h	/^    OP_JUMP_IF_FALSE,$/;"	e	enum:__anon9
 OP_LESS	include/chunk/chunk.h	/^    OP_LESS,$/;"	e	enum:__anon9
+OP_LOOP	include/chunk/chunk.h	/^    OP_LOOP,$/;"	e	enum:__anon9
 OP_MULTIPLY	include/chunk/chunk.h	/^    OP_MULTIPLY,$/;"	e	enum:__anon9
 OP_NEGATE	include/chunk/chunk.h	/^    OP_NEGATE,$/;"	e	enum:__anon9
 OP_NIL	include/chunk/chunk.h	/^    OP_NIL,$/;"	e	enum:__anon9
@@ -293,12 +296,14 @@ ParseFn	src/compiler/compiler.c	/^typedef void (*ParseFn)(bool canAssign);$/;"	t
 ParseRule	src/compiler/compiler.c	/^} ParseRule;$/;"	t	typeref:struct:__anon4	file:
 Parser	src/compiler/compiler.c	/^} Parser;$/;"	t	typeref:struct:__anon2	file:
 Precedence	src/compiler/compiler.c	/^} Precedence;$/;"	t	typeref:enum:__anon3	file:
-READ_BYTE	src/vm/vm.c	154;"	d	file:
+READ_BYTE	src/vm/vm.c	180;"	d	file:
 READ_BYTE	src/vm/vm.c	51;"	d	file:
-READ_CONSTANT	src/vm/vm.c	156;"	d	file:
+READ_CONSTANT	src/vm/vm.c	183;"	d	file:
 READ_CONSTANT	src/vm/vm.c	52;"	d	file:
-READ_STRING	src/vm/vm.c	155;"	d	file:
-READ_STRING	src/vm/vm.c	53;"	d	file:
+READ_SHORT	src/vm/vm.c	182;"	d	file:
+READ_SHORT	src/vm/vm.c	53;"	d	file:
+READ_STRING	src/vm/vm.c	181;"	d	file:
+READ_STRING	src/vm/vm.c	54;"	d	file:
 RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	209;"	d	file:
@@ -380,6 +385,7 @@ advance	src/compiler/compiler.c	/^static void advance() {$/;"	f	file:
 advance	src/scanner/scanner.c	/^static char advance() {$/;"	f	file:
 allocateObject	src/object.c	/^static Obj* allocateObject(size_t size, ObjType type) {$/;"	f	file:
 allocateString	src/object.c	/^static ObjString* allocateString(char* chars, int length, uint32_t hash) {$/;"	f	file:
+and_	src/compiler/compiler.c	/^static void and_(bool canAssign) {$/;"	f	file:
 as	include/value.h	/^    } as;$/;"	m	struct:__anon13	typeref:union:__anon13::__anon14
 beginScope	src/compiler/compiler.c	/^static void beginScope() {$/;"	f	file:
 binary	src/compiler/compiler.c	/^static void binary(bool canAssign) {$/;"	f	file:
@@ -418,6 +424,8 @@ disassembleInstruction	src/debug/debug.c	/^int disassembleInstruction(Chunk* chu
 emitByte	src/compiler/compiler.c	/^static void emitByte(uint8_t byte) {$/;"	f	file:
 emitBytes	src/compiler/compiler.c	/^static void emitBytes(uint8_t byte1, uint8_t byte2) {$/;"	f	file:
 emitConstant	src/compiler/compiler.c	/^static void emitConstant(Value value) {$/;"	f	file:
+emitJump	src/compiler/compiler.c	/^static int emitJump(uint8_t instruction) {$/;"	f	file:
+emitLoop	src/compiler/compiler.c	/^static void emitLoop(int loopStart) {$/;"	f	file:
 emitReturn	src/compiler/compiler.c	/^static void emitReturn() { emitByte(OP_RETURN); }$/;"	f	file:
 endCompiler	src/compiler/compiler.c	/^static void endCompiler() { $/;"	f	file:
 endScope	src/compiler/compiler.c	/^static void endScope() {$/;"	f	file:
@@ -429,6 +437,7 @@ errorToken	src/scanner/scanner.c	/^static Token errorToken(const char* message) 
 expression	src/compiler/compiler.c	/^static void expression() {$/;"	f	file:
 expressionStatement	src/compiler/compiler.c	/^static void expressionStatement() {$/;"	f	file:
 findEntry	src/hash/hashtable.c	/^static Entry* findEntry(Entry* entries, int capacity, ObjString* key) {$/;"	f	file:
+forStatement	src/compiler/compiler.c	/^static void forStatement() {$/;"	f	file:
 freeChunk	src/chunk/chunk.c	/^void freeChunk(Chunk* chunk) {$/;"	f
 freeObject	src/memory.c	/^static void freeObject(Obj* object) {$/;"	f	file:
 freeObjects	src/memory.c	/^void freeObjects() {$/;"	f
@@ -445,6 +454,7 @@ identifier	src/scanner/scanner.c	/^static Token identifier() {$/;"	f	file:
 identifierConstant	src/compiler/compiler.c	/^static uint8_t identifierConstant(Token* name) {$/;"	f	file:
 identifierType	src/scanner/scanner.c	/^static TokenType identifierType() {$/;"	f	file:
 identifiersEqual	src/compiler/compiler.c	/^static bool identifiersEqual(Token* a, Token* b) {$/;"	f	file:
+ifStatement	src/compiler/compiler.c	/^static void ifStatement() {$/;"	f	file:
 infix	src/compiler/compiler.c	/^    ParseFn infix;$/;"	m	struct:__anon4	file:
 info_arch	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_compiler	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
@@ -468,6 +478,7 @@ isAtEnd	src/scanner/scanner.c	/^static bool isAtEnd() {$/;"	f	file:
 isDigit	src/scanner/scanner.c	/^static bool isDigit(char c) {$/;"	f	file:
 isFalsey	src/vm/vm.c	/^static bool isFalsey(Value value) {$/;"	f	file:
 isObjType	include/object.h	/^static inline bool isObjType(Value value, ObjType type) {$/;"	f
+jumpInstruction	src/debug/debug.c	/^static int jumpInstruction(const char* name, int sign, Chunk* chunk, int offset) {$/;"	f	file:
 key	include/hash/hashtable.h	/^    ObjString* key;$/;"	m	struct:__anon18
 length	include/object.h	/^    int length;$/;"	m	struct:ObjString
 length	include/scanner/scanner.h	/^    int length;$/;"	m	struct:__anon8
@@ -494,10 +505,12 @@ number	src/scanner/scanner.c	/^static Token number() {$/;"	f	file:
 obj	include/object.h	/^    Obj obj;$/;"	m	struct:ObjString
 obj	include/value.h	/^        Obj* obj;$/;"	m	union:__anon13::__anon14
 objects	include/vm/vm.h	/^    Obj* objects;$/;"	m	struct:__anon16
+or_	src/compiler/compiler.c	/^static void or_(bool canAssign) {$/;"	f	file:
 panicMode	src/compiler/compiler.c	/^    bool panicMode;$/;"	m	struct:__anon2	file:
 parsePrecedence	src/compiler/compiler.c	/^static void parsePrecedence(Precedence precedence) {$/;"	f	file:
 parseVariable	src/compiler/compiler.c	/^static uint8_t parseVariable(const char* errorMessage) {$/;"	f	file:
 parser	src/compiler/compiler.c	/^Parser parser;$/;"	v
+patchJump	src/compiler/compiler.c	/^static void patchJump(int offset) {$/;"	f	file:
 peek	src/scanner/scanner.c	/^static char peek() {$/;"	f	file:
 peek	src/vm/vm.c	/^static Value peek(int distance) {$/;"	f	file:
 peekNext	src/scanner/scanner.c	/^static char peekNext() {$/;"	f	file:
@@ -551,5 +564,6 @@ varDeclaration	src/compiler/compiler.c	/^static void varDeclaration() {$/;"	f	fi
 variable	src/compiler/compiler.c	/^static void variable(bool canAssign) {$/;"	f	file:
 vm	src/vm/vm.c	/^VM vm;$/;"	v
 volatile	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
+whileStatement	src/compiler/compiler.c	/^static void whileStatement() {$/;"	f	file:
 writeChunk	src/chunk/chunk.c	/^void writeChunk(Chunk* chunk, uint8_t byte, int line) {$/;"	f
 writeValueArray	src/value.c	/^void writeValueArray(ValueArray* array, Value value) {$/;"	f
