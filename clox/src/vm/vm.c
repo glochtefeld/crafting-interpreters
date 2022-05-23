@@ -184,6 +184,7 @@ static InterpretResult run() {
 }
 
 static void resetStack() {
+    vm.stackTop = vm.stack;
     vm.frameCount = 0;
 }
 
