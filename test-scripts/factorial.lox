@@ -1,0 +1,24 @@
+var before = clock();
+
+fun timing(b) {
+    print clock() - b;
+}
+fun factorial_r(x) {
+    if (x < 2) return x;
+    else return x * factorial_r(x - 1);
+}
+fun iter(x, acc) {
+    if (x < 2) return acc;
+    else return iter(x - 1, acc * x);
+}
+fun factorial_i(x) {
+    return iter(x, 1);
+}
+
+
+factorial_r(63);
+timing(before);
+before = clock();
+
+factorial_i(62);
+timing(before);
