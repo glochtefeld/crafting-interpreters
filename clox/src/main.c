@@ -2,6 +2,7 @@
 #include "chunk/chunk.h"
 #include "debug/debug.h"
 #include "vm/vm.h"
+#include <stdio.h>
 
 static void repl();
 static void runFile(const char* path);
