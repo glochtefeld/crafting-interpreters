@@ -34,6 +34,14 @@ void markObject(Obj* object) {
 #endif
 
     object->isMarked = true;
+
+    if (vm.grayCapacity < vm.grayCount + 1) {
+        vm.grayCapacity = GROW_CAPACITY(vm.grayCapacity);
+        vm.grayStack = realloc(vm.grayStack, sizeof(Obj*) * vm.grayCapacity);
+        if (vm.grayStack == NULL) exit(1);
+    }
+
+    vm.grayStack[vm.grayCount++] = object;
 }
 
 void markValue(Value value) {
@@ -90,12 +98,15 @@ static void markRoots() {
     markCompilerRoots();
 }
 
+static void traceReferences() { // TODO 26.4.3
+
 void collectGarbage() {
 #ifdef DEBUG_LOG_GC
     printf("-- gc begin\n");
 #endif
 
     markRoots();
+    traceReferences();
 
 #ifdef DEBUG_LOG_GC
     printf("-- gc end\n");
@@ -109,4 +120,6 @@ void freeObjects() {
         freeObject(object);
         object = next;
     }
+
+    free(vm.grayStack);
 }
