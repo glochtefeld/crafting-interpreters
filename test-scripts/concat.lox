@@ -1,0 +1,14 @@
+var a = "Hello";
+var b = " ";
+var c = "World!";
+
+var d = a + b + c;
+
+for (var i = 0; i < 10; i = i + 1) {
+    d = d + b + d;
+}
+
+print d;
+d = "Test New";
+print d;
+

@@ -4,9 +4,9 @@
 #include "common.h"
 #include "compiler/compiler.h"
 #include "scanner/scanner.h"
+#include "memory.h"
 #ifdef DEBUG_PRINT_CODE
 #include "debug/debug.h"
-#include "memory.h"
 #endif
 
 typedef struct {

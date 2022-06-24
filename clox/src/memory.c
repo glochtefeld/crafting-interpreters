@@ -11,12 +11,13 @@
 #define GC_HEAP_GROW_FACTOR 2
 
 extern VM vm;
+void markArray(ValueArray* array);
 
 void* reallocate(void* pointer, size_t oldSize, size_t newSize) {
     vm.bytesAllocated += newSize - oldSize;
     if (newSize > oldSize) {
 #ifdef DEBUG_STRESS_GC
-        /*collectGarbage();*/
+        collectGarbage();
 #endif
     }
 
@@ -46,7 +47,7 @@ void markObject(Obj* object) {
 
     if (vm.grayCapacity < vm.grayCount + 1) {
         vm.grayCapacity = GROW_CAPACITY(vm.grayCapacity);
-        vm.grayStack = realloc(vm.grayStack, sizeof(Obj*) * vm.grayCapacity);
+        vm.grayStack = (Obj**)realloc(vm.grayStack, sizeof(Obj*) * vm.grayCapacity);
         if (vm.grayStack == NULL) exit(1);
     }
 
@@ -60,7 +61,6 @@ static void blackenObject(Obj* object) {
     printf("\n");
 #endif
 
-    if (object == NULL) return;
     switch(object->type) {
         case OBJ_CLOSURE: {
             ObjClosure* closure = (ObjClosure*)object;
