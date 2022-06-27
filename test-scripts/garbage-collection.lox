@@ -1,0 +1,8 @@
+var x = "test";
+{
+    var y = "Hello, World!";
+}
+
+var z = "test";
+
+print x;

@@ -31,7 +31,7 @@ void initVM() {
     vm.objects = NULL;
 
     vm.bytesAllocated = 0;
-    vm.nextGC = 128;
+    vm.nextGC = 1024 * 1024;
 
     vm.grayCount = 0;
     vm.grayCapacity = 0;
@@ -241,6 +241,9 @@ static InterpretResult run() {
                 frame = &vm.frames[vm.frameCount - 1];
                 break;
             }
+            case OP_CLASS:
+                push(OBJ_VAL(newClass(READ_STRING()));
+                break;
         }
     }
 #undef READ_BYTE

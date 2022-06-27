@@ -44,8 +44,8 @@ AS_NATIVE	include/object.h	15;"	d
 AS_NUMBER	include/value.h	36;"	d
 AS_OBJ	include/value.h	37;"	d
 AS_STRING	include/object.h	16;"	d
-BINARY_OP	src/vm/vm.c	236;"	d	file:
-BINARY_OP	src/vm/vm.c	63;"	d	file:
+BINARY_OP	src/vm/vm.c	250;"	d	file:
+BINARY_OP	src/vm/vm.c	72;"	d	file:
 BOOL_VAL	include/value.h	25;"	d
 CLOX_CHUNK_H	include/chunk/chunk.h	2;"	d
 CLOX_COMMON_H	include/common.h	2;"	d
@@ -198,15 +198,18 @@ CallFrame	include/vm/vm.h	/^} CallFrame;$/;"	t	typeref:struct:__anon20
 Chunk	include/chunk/chunk.h	/^} Chunk;$/;"	t	typeref:struct:__anon11
 Compiler	src/compiler/compiler.c	/^typedef struct Compiler {$/;"	s	file:
 Compiler	src/compiler/compiler.c	/^} Compiler;$/;"	t	typeref:struct:Compiler	file:
-DEBUG_PRINT_CODE	include/common.h	11;"	d
-DEBUG_TRACE_EXECUTION	include/common.h	12;"	d
+DEBUG_LOG_GC	include/common.h	15;"	d
+DEBUG_PRINT_CODE	include/common.h	13;"	d
+DEBUG_STRESS_GC	include/common.h	16;"	d
+DEBUG_TRACE_EXECUTION	include/common.h	14;"	d
 DEC	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	544;"	d	file:
 EQUALS	build/Makefile	/^EQUALS = =$/;"	m
 Entry	include/hash/hashtable.h	/^} Entry;$/;"	t	typeref:struct:__anon23
 FRAMES_MAX	include/vm/vm.h	10;"	d
 FREE	include/memory.h	9;"	d
-FREE_ARRAY	include/memory.h	21;"	d
+FREE_ARRAY	include/memory.h	24;"	d
 FunctionType	src/compiler/compiler.c	/^} FunctionType;$/;"	t	typeref:enum:__anon7	file:
+GC_HEAP_GROW_FACTOR	src/memory.c	11;"	d	file:
 GROW_ARRAY	include/memory.h	14;"	d
 GROW_CAPACITY	include/memory.h	11;"	d
 HEX	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	555;"	d	file:
@@ -321,14 +324,14 @@ ParseFn	src/compiler/compiler.c	/^typedef void (*ParseFn)(bool canAssign);$/;"	t
 ParseRule	src/compiler/compiler.c	/^} ParseRule;$/;"	t	typeref:struct:__anon4	file:
 Parser	src/compiler/compiler.c	/^} Parser;$/;"	t	typeref:struct:__anon2	file:
 Precedence	src/compiler/compiler.c	/^} Precedence;$/;"	t	typeref:enum:__anon3	file:
-READ_BYTE	src/vm/vm.c	232;"	d	file:
-READ_BYTE	src/vm/vm.c	58;"	d	file:
-READ_CONSTANT	src/vm/vm.c	235;"	d	file:
-READ_CONSTANT	src/vm/vm.c	59;"	d	file:
-READ_SHORT	src/vm/vm.c	234;"	d	file:
-READ_SHORT	src/vm/vm.c	60;"	d	file:
-READ_STRING	src/vm/vm.c	233;"	d	file:
-READ_STRING	src/vm/vm.c	62;"	d	file:
+READ_BYTE	src/vm/vm.c	246;"	d	file:
+READ_BYTE	src/vm/vm.c	67;"	d	file:
+READ_CONSTANT	src/vm/vm.c	249;"	d	file:
+READ_CONSTANT	src/vm/vm.c	68;"	d	file:
+READ_SHORT	src/vm/vm.c	248;"	d	file:
+READ_SHORT	src/vm/vm.c	69;"	d	file:
+READ_STRING	src/vm/vm.c	247;"	d	file:
+READ_STRING	src/vm/vm.c	71;"	d	file:
 RM	build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 SHELL	build/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	209;"	d	file:
@@ -396,7 +399,7 @@ TYPE_SCRIPT	src/compiler/compiler.c	/^    TYPE_SCRIPT,$/;"	e	enum:__anon7	file:
 Table	include/hash/hashtable.h	/^} Table;$/;"	t	typeref:struct:__anon24
 Token	include/scanner/scanner.h	/^} Token;$/;"	t	typeref:struct:__anon9
 TokenType	include/scanner/scanner.h	/^} TokenType;$/;"	t	typeref:enum:__anon8
-UINT8_COUNT	include/common.h	13;"	d
+UINT8_COUNT	include/common.h	11;"	d
 Upvalue	src/compiler/compiler.c	/^} Upvalue;$/;"	t	typeref:struct:__anon6	file:
 VAL_BOOL	include/value.h	/^    VAL_BOOL,$/;"	e	enum:__anon16
 VAL_NIL	include/value.h	/^    VAL_NIL,$/;"	e	enum:__anon16
@@ -420,9 +423,11 @@ arity	include/object.h	/^    int arity;$/;"	m	struct:__anon13
 as	include/value.h	/^    } as;$/;"	m	struct:__anon17	typeref:union:__anon17::__anon18
 beginScope	src/compiler/compiler.c	/^static void beginScope() {$/;"	f	file:
 binary	src/compiler/compiler.c	/^static void binary(bool canAssign) {$/;"	f	file:
+blackenObject	src/memory.c	/^static void blackenObject(Obj* object) {$/;"	f	file:
 block	src/compiler/compiler.c	/^static void block() {$/;"	f	file:
 boolean	include/value.h	/^        bool boolean;$/;"	m	union:__anon17::__anon18
 byteInstruction	src/debug/debug.c	/^static int byteInstruction(const char* name, Chunk* chunk, int offset) {$/;"	f	file:
+bytesAllocated	include/vm/vm.h	/^    size_t bytesAllocated;$/;"	m	struct:__anon21
 call	src/compiler/compiler.c	/^static void call(bool canAssign) {$/;"	f	file:
 call	src/vm/vm.c	/^static bool call(ObjClosure* closure, int argCount) {$/;"	f	file:
 callValue	src/vm/vm.c	/^static bool callValue(Value callee, int argCount) {$/;"	f	file:
@@ -435,8 +440,11 @@ check	src/compiler/compiler.c	/^static bool check(TokenType type) {$/;"	f	file:
 checkKeyword	src/scanner/scanner.c	/^static TokenType checkKeyword(int start, int length, const char* rest, TokenType type) {$/;"	f	file:
 chunk	include/object.h	/^    Chunk chunk;$/;"	m	struct:__anon13
 clockNative	src/vm/vm.c	/^static Value clockNative(int argCount, Value* args) {$/;"	f	file:
+closeUpvalues	src/vm/vm.c	/^static void closeUpvalues(Value* last) {$/;"	f	file:
+closed	include/object.h	/^    Value closed;$/;"	m	struct:ObjUpvalue
 closure	include/vm/vm.h	/^    ObjClosure* closure;$/;"	m	struct:__anon20
 code	include/chunk/chunk.h	/^    uint8_t* code;$/;"	m	struct:__anon11
+collectGarbage	src/memory.c	/^void collectGarbage() {$/;"	f
 compile	src/compiler/compiler.c	/^ObjFunction* compile(const char* source) {$/;"	f
 concatenate	src/vm/vm.c	/^static void concatenate() {$/;"	f	file:
 const	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
@@ -491,6 +499,9 @@ function	src/compiler/compiler.c	/^    ObjFunction* function;$/;"	m	struct:Compi
 function	src/compiler/compiler.c	/^static void function(FunctionType type) {$/;"	f	file:
 getRule	src/compiler/compiler.c	/^static ParseRule* getRule(TokenType type) {$/;"	f	file:
 globals	include/vm/vm.h	/^    Table globals;$/;"	m	struct:__anon21
+grayCapacity	include/vm/vm.h	/^    int grayCapacity;$/;"	m	struct:__anon21
+grayCount	include/vm/vm.h	/^    int grayCount;$/;"	m	struct:__anon21
+grayStack	include/vm/vm.h	/^    Obj** grayStack;$/;"	m	struct:__anon21
 grouping	src/compiler/compiler.c	/^static void grouping(bool canAssign) {$/;"	f	file:
 hadError	src/compiler/compiler.c	/^    bool hadError;$/;"	m	struct:__anon2	file:
 hash	include/object.h	/^    uint32_t hash;$/;"	m	struct:ObjString
@@ -525,6 +536,7 @@ isCaptured	src/compiler/compiler.c	/^    bool isCaptured;$/;"	m	struct:__anon5	f
 isDigit	src/scanner/scanner.c	/^static bool isDigit(char c) {$/;"	f	file:
 isFalsey	src/vm/vm.c	/^static bool isFalsey(Value value) {$/;"	f	file:
 isLocal	src/compiler/compiler.c	/^    bool isLocal;$/;"	m	struct:__anon6	file:
+isMarked	include/object.h	/^    bool isMarked;$/;"	m	struct:Obj
 isObjType	include/object.h	/^static inline bool isObjType(Value value, ObjType type) {$/;"	f
 jumpInstruction	src/debug/debug.c	/^static int jumpInstruction(const char* name, int sign, Chunk* chunk, int offset) {$/;"	f	file:
 key	include/hash/hashtable.h	/^    ObjString* key;$/;"	m	struct:__anon23
@@ -542,7 +554,13 @@ main	build/CMakeFiles/3.16.3/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"
 main	src/main.c	/^int main(int argc, const char* argv[]) {$/;"	f
 makeConstant	src/compiler/compiler.c	/^static uint8_t makeConstant(Value value) {$/;"	f	file:
 makeToken	src/scanner/scanner.c	/^static Token makeToken(TokenType type) {$/;"	f	file:
+markArray	src/memory.c	/^void markArray(ValueArray* array) {$/;"	f
+markCompilerRoots	src/compiler/compiler.c	/^void markCompilerRoots() {$/;"	f
 markInitialized	src/compiler/compiler.c	/^static void markInitialized() {$/;"	f	file:
+markObject	src/memory.c	/^void markObject(Obj* object) {$/;"	f
+markRoots	src/memory.c	/^static void markRoots() {$/;"	f	file:
+markTable	src/hash/hashtable.c	/^void markTable(Table* table) {$/;"	f
+markValue	src/memory.c	/^void markValue(Value value) {$/;"	f
 match	src/compiler/compiler.c	/^static bool match(TokenType type) {$/;"	f	file:
 match	src/scanner/scanner.c	/^static bool match(char expected) {$/;"	f	file:
 name	include/object.h	/^    ObjString* name;$/;"	m	struct:__anon13
@@ -554,6 +572,7 @@ newNative	src/object.c	/^ObjNative* newNative(NativeFn function) {$/;"	f
 newUpvalue	src/object.c	/^ObjUpvalue* newUpvalue(Value* slot) {$/;"	f
 next	include/object.h	/^    struct Obj* next;$/;"	m	struct:Obj	typeref:struct:Obj::Obj
 next	include/object.h	/^    struct ObjUpvalue* next;$/;"	m	struct:ObjUpvalue	typeref:struct:ObjUpvalue::ObjUpvalue
+nextGC	include/vm/vm.h	/^    size_t nextGC;$/;"	m	struct:__anon21
 number	include/value.h	/^        double number;$/;"	m	union:__anon17::__anon18
 number	src/compiler/compiler.c	/^static void number(bool canAssign) {$/;"	f	file:
 number	src/scanner/scanner.c	/^static Token number() {$/;"	f	file:
@@ -610,13 +629,16 @@ statement	src/compiler/compiler.c	/^static void statement() {$/;"	f	file:
 string	src/compiler/compiler.c	/^static void string(bool canAssign) {$/;"	f	file:
 string	src/scanner/scanner.c	/^static Token string() {$/;"	f	file:
 strings	include/vm/vm.h	/^    Table strings;$/;"	m	struct:__anon21
+sweep	src/memory.c	/^static void sweep() {$/;"	f	file:
 synchronize	src/compiler/compiler.c	/^static void synchronize() {$/;"	f	file:
 tableAddAll	src/hash/hashtable.c	/^void tableAddAll(Table* from, Table* to) {$/;"	f
 tableDelete	src/hash/hashtable.c	/^bool tableDelete(Table* table, ObjString* key) {$/;"	f
 tableFindString	src/hash/hashtable.c	/^ObjString* tableFindString(Table* table, const char* chars, int length, uint32_t hash) {$/;"	f
 tableGet	src/hash/hashtable.c	/^bool tableGet(Table* table, ObjString* key, Value* value) {$/;"	f
+tableRemoveWhite	src/hash/hashtable.c	/^void tableRemoveWhite(Table* table) {$/;"	f
 tableSet	src/hash/hashtable.c	/^bool tableSet(Table* table, ObjString* key, Value value) {$/;"	f
 takeString	src/object.c	/^ObjString* takeString(char* chars, int length) {$/;"	f
+traceReferences	src/memory.c	/^static void traceReferences() {$/;"	f	file:
 type	include/object.h	/^    ObjType type;$/;"	m	struct:Obj
 type	include/scanner/scanner.h	/^    TokenType type;$/;"	m	struct:__anon9
 type	include/value.h	/^    ValueType type;$/;"	m	struct:__anon17

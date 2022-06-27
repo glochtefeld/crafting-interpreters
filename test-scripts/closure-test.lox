@@ -1,8 +1,10 @@
 fun outer() {
-    var x = "outside";
+    var x = "Hello " + "World";
     fun inner() {
         print x;
     }
-    inner();
+    return inner;
 }
-outer();
+var y = outer();
+var z = "Computer " + "Program";
+y();
